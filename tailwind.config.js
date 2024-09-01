@@ -7,12 +7,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily:{
+        hamlin : ['Hamlin','sans-serif'],
+        anton : ['Anton','sans-serif'],
+      },animation:{
+        'infinite-scroll':'infinite-scroll 25s linear infinite',
+      },
+      keyframes:{
+        'infinite-scroll' : {
+          from:{transform: 'translateX(0)'},
+          to:{transform: 'translateX(40%)'},
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({addUtilities}){
+      addUtilities({
+        '.bg-pos-x-400':{
+          'background-position-x':'-420px',
+        },
+        '.bg-pos-x-800':{
+          'background-position-x':'-840px',
+        },
+      })
+    }
+  ],
 };
