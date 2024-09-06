@@ -2,6 +2,8 @@ import Heropage from "@/components/homepagecomp/heropage/Heropage";
 import Videoback from "@/components/homepagecomp/videoback/Videoback";
 import Upcominganim from "@/components/homepagecomp/upcominganim/Upcominganim";
 import Image from "next/image";
+import Horizonembed from "@/components/homepagecomp/horizonembed/Horizonembed";
+import Aboutus from "@/components/homepagecomp/aboutus/Aboutus";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <Heropage/>
       <Videoback/>
       <Upcominganim/>
+      <Horizonembed/>
+      <Aboutus/>
     </main>
   );
 }
