@@ -30,6 +30,15 @@ module.exports = {
         '.bg-pos-x-800':{
           'background-position-x':'-840px',
         },
+        '.bg-pos-x-300':{
+          'background-position-x':'-300px',
+        },
+        '.bg-pos-x-600':{
+          'background-position-x':'-600px',
+        },
+        '.bg-pos-x-150':{
+          'background-position-x':'-150px',
+        }
       })
     }
   ],

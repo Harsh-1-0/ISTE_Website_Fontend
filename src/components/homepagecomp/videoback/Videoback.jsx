@@ -1,22 +1,9 @@
 'use client'
-import { useState,useEffect } from "react";
-
 const Videoback = ({srcval}) => {
-  const [isClient,setisClient] = useState(false);
-
-  useEffect(()=>{
-    setisClient(true);
-  },[])
-
-  if(!isClient){
-    return null;
-  }
+  console.log(srcval);
   return ( 
-    <div>
-      <video autoPlay loop muted className="w-full">
-        <source src={srcval} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div className="w-screen h-[50%] md:h-screen overflow-hidden my-3 md:my-8">
+      <video src="/Videos/crtthefourth.mp4" autoPlay loop muted className="w-full h-full object-cover"></video>
     </div>
    );
 }
