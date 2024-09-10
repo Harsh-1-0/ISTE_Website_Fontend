@@ -11,7 +11,7 @@ import Partners from "@/components/homepagecomp/partners/Partners";
 
 export default function Home() {
   return (
-    <main className="mt-20 md:mt-24">
+    <main className="mt-20 md:mt-24 ">
       <Heropage />
       <Videoback />
       <Upcominganim />
