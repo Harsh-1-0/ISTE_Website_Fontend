@@ -27,12 +27,12 @@ const Navbar = () => {
   },[]);
   
   return ( 
-    <div className={`flex items-center justify-between text-3xl md:text-2xl lg:text-3xl w-full fixed top-0 border-b-black border-b-4 p-4 z-50
+    <div className={`flex items-center justify-between text-3xl md:text-xl lg:text-3xl w-full fixed top-0 border-b-black border-b-4 p-4 z-50
     ${isScrolled || isOpen ? "bg-black" : "bg-white"}
     ${isScrolled || isOpen ? "text-white" : "text-black"}`}
     >
       <div className="flex items-center">
-        <a href="/"><Image src='/Pictures/istelogo.svg' alt="logo" width={45} height={45} className="sm:mx-4 w-12"/></a>
+        <a href="/"><Image src='/Pictures/istelogo.svg' alt="logo" width={45} height={45} className="mx-2 w-12"/></a>
         <a href="/"><div className={`${isOpen || isScrolled ? "text-white" : "text-black"}`}>ISTE</div></a>
       </div>
       <div className="flex items-center">
