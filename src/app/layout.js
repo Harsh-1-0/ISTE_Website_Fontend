@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className="font-anton min-h-screen flex flex-col justify-between">
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
