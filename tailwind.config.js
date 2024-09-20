@@ -7,39 +7,40 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        hamlin : ['Hamlin','sans-serif'],
-        anton : ['Anton','sans-serif'],
-      },animation:{
-        'infinite-scroll':'infinite-scroll 25s linear infinite',
+      fontFamily: {
+        hamlin: ["Hamlin", "sans-serif"],
+        anton: ["Anton", "sans-serif"],
       },
-      keyframes:{
-        'infinite-scroll' : {
-          from:{transform: 'translateX(0)'},
-          to:{transform: 'translateX(40%)'},
-        }
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(40%)" },
+        },
       },
     },
   },
   plugins: [
-    function({addUtilities}){
+    function ({ addUtilities }) {
       addUtilities({
-        '.bg-pos-x-400':{
-          'background-position-x':'-420px',
+        ".bg-pos-x-400": {
+          "background-position-x": "-420px",
         },
-        '.bg-pos-x-800':{
-          'background-position-x':'-840px',
+        ".bg-pos-x-800": {
+          "background-position-x": "-840px",
         },
-        '.bg-pos-x-300':{
-          'background-position-x':'-300px',
+        ".bg-pos-x-300": {
+          "background-position-x": "-300px",
         },
-        '.bg-pos-x-600':{
-          'background-position-x':'-600px',
+        ".bg-pos-x-600": {
+          "background-position-x": "-600px",
         },
-        '.bg-pos-x-150':{
-          'background-position-x':'-150px',
-        }
-      })
-    }
+        ".bg-pos-x-150": {
+          "background-position-x": "-150px",
+        },
+      });
+    },
   ],
 };

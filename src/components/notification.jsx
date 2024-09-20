@@ -25,7 +25,7 @@ export default function Notification({
 
   return (
     <div
-      className="w-full  fixed top-1 z-10 right-5  text-white px-4 py-2 rounded shadow-lg"
+      className="w-full  fixed top-1 z-50 right-5  text-white px-4 py-2 rounded shadow-lg"
       style={{ backgroundColor: color }}
     >
       <div className="flex justify-between">

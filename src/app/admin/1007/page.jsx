@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { auth, provider, signInWithPopup } from "../../../components/firebase";
 import Notification from "@/components/notification";
@@ -8,7 +8,9 @@ const SignIn = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [color, setColor] = useState("");
-
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
   const handleSignUp = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
@@ -28,12 +30,12 @@ const SignIn = () => {
         setShowNotification(true);
       }
     } catch (error) {
-      if (response.status === 403) {
+      if (error.status === 403) {
         setNotificationMessage("User already exists");
         setShowNotification(true);
         setColor("red");
       } else {
-        setNotificationMessage("Error: " + response.data.message);
+        setNotificationMessage("Error: " + error.data.message);
         setShowNotification(true);
         setColor("red");
       }
@@ -55,10 +57,11 @@ const SignIn = () => {
         }
       );
       if (response.status === 200) {
-        localStorage.setItem("token", response.data);
+        localStorage.setItem("tokenISTE", response.data);
         setNotificationMessage("Login successful");
         setColor("green");
         setShowNotification(true);
+        window.location.href = "/admin/1007/dashboard";
       }
     } catch (err) {
       if (err.status === 404) {
@@ -66,7 +69,7 @@ const SignIn = () => {
         setShowNotification(true);
         setColor("red");
       } else {
-        setNotificationMessage("Error: " + response.data.message);
+        setNotificationMessage("Error: " + error.data.message);
         setShowNotification(true);
         setColor("red");
       }
