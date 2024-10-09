@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { Upload } from "lucide-react";
+import { Upload, Camera } from "lucide-react";
+import Notification from "@/components/notification";
 import Image from "next/image";
-
-const AddCore = () => {
+const AddBoard = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [color, setColor] = useState("");
@@ -24,7 +24,7 @@ const AddCore = () => {
     name: "",
     surname: "",
     regno: "",
-    domain: "",
+    position: "",
     linkedin: "",
     connectlink: "",
   });
@@ -57,11 +57,11 @@ const AddCore = () => {
     Object.keys(Data).forEach((key) => {
       formData.append(key, Data[key]);
     });
-    formData.append("coreimage", image);
+    formData.append("boardimage", image);
 
     try {
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/core",
+        "https://iste-website-api.vercel.app/board",
         formData,
         {
           headers: {
@@ -72,7 +72,7 @@ const AddCore = () => {
       );
 
       if (response.status === 201) {
-        setNotificationMessage("Core Member Added Successfully");
+        setNotificationMessage("Board Member Added Successfully");
         setShowNotification(true);
         setColor("green");
         setTimeout(() => {
@@ -81,7 +81,7 @@ const AddCore = () => {
       }
     } catch (err) {
       const errorMessages = {
-        409: "Core Member already exists",
+        409: "Board Member already exists",
         403: "All Fields are required in the form",
         500: err.response?.data?.error?.message || "Server Error",
       };
@@ -94,10 +94,10 @@ const AddCore = () => {
   };
 
   return (
-    <div className="min-h-screen mt-8    bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-8    bg-gradient-to-br from-purple-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-          Add Core Member
+          Add Board Member
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -113,7 +113,7 @@ const AddCore = () => {
                 name="name"
                 value={Data.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                 placeholder="Enter name"
               />
             </div>
@@ -123,13 +123,12 @@ const AddCore = () => {
                 Surname
               </label>
               <input
-                required
                 autoComplete="off"
                 type="text"
                 name="surname"
                 value={Data.surname}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                 placeholder="Enter surname"
               />
             </div>
@@ -146,41 +145,25 @@ const AddCore = () => {
               name="regno"
               value={Data.regno}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
               placeholder="Enter registration number"
             />
           </div>
 
           <div className="space-y-2">
             <label className="block text-sm font-medium text-gray-700">
-              Domain
+              Position
             </label>
-            <select
-              name="domain"
+            <input
+              autoComplete="off"
               required
-              value={Data.domain}
+              type="text"
+              name="position"
+              value={Data.position}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            >
-              <option value="" disabled>
-                Select a domain
-              </option>
-              {[
-                "App Development",
-                "Competitive Coding",
-                "Design",
-                "Electrical",
-                "Internet of Things",
-                "Machine Learning",
-                "Management",
-                "Motion Graphics",
-                "Web Development",
-              ].map((domain) => (
-                <option key={domain} value={domain}>
-                  {domain}
-                </option>
-              ))}
-            </select>
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+              placeholder="Enter position"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -189,13 +172,14 @@ const AddCore = () => {
                 LinkedIn
               </label>
               <input
+                autoComplete="off"
                 required
-                type="url"
+                type="text"
                 name="linkedin"
                 value={Data.linkedin}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                placeholder="Enter LinkedIn URL"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                placeholder="LinkedIn profile URL"
               />
             </div>
 
@@ -206,12 +190,12 @@ const AddCore = () => {
               <input
                 autoComplete="off"
                 required
-                type="url"
+                type="text"
                 name="connectlink"
                 value={Data.connectlink}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                placeholder="Enter connect link"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                placeholder="Additional connect link"
               />
             </div>
           </div>
@@ -222,66 +206,78 @@ const AddCore = () => {
             </label>
             <div
               onClick={triggerFileInput}
-              className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md hover:border-indigo-500 transition-colors cursor-pointer"
+              className="mt-1 relative group cursor-pointer bg-gray-50 hover:bg-gray-100 transition-all duration-300 flex flex-col justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md hover:border-purple-500"
             >
-              <div className="space-y-1 text-center">
+              <input
+                autoComplete="off"
+                ref={fileInputRef}
+                type="file"
+                name="boardimage"
+                onChange={handleFile}
+                className="hidden"
+                accept="image/*"
+                required
+              />
+
+              <div className="space-y-4 text-center">
                 {imagePreview ? (
-                  <Image
-                    src={imagePreview}
-                    height={128}
-                    width={128}
-                    alt="Preview"
-                    className="mx-auto h-32 w-32 object-cover rounded-full"
-                  />
+                  <div className="relative inline-block group">
+                    <Image
+                      height={128}
+                      width={128}
+                      src={imagePreview}
+                      alt="Preview"
+                      className="mx-auto h-32 w-32 object-cover rounded ring-2 ring-purple-500 ring-offset-2"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Camera className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
                 ) : (
-                  <Upload className="mx-auto h-12 w-12 text-gray-400" />
+                  <div className="flex flex-col items-center">
+                    <Upload className="mx-auto h-12 w-12 text-gray-400 group-hover:text-purple-500 transition-colors" />
+                    <div className="mt-4">
+                      <div className="flex text-sm text-gray-600">
+                        <span className="relative rounded-md font-medium text-purple-600 hover:text-purple-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-purple-500">
+                          Click to upload a profile picture
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">
+                        supported formats: WEBP upto 5MB
+                      </p>
+                    </div>
+                  </div>
                 )}
-                <div className="flex text-sm text-gray-600 justify-center">
-                  <span className="relative font-medium text-indigo-600 hover:text-indigo-500">
-                    Click to upload a profile picture
-                  </span>
-                  <input
-                    autoComplete="off"
-                    ref={fileInputRef}
-                    required
-                    type="file"
-                    name="coreimage"
-                    onChange={handleFile}
-                    className="hidden"
-                    accept="image/*"
-                  />
-                </div>
-                <p className="text-xs text-gray-500">PNG, JPG up to 10MB</p>
               </div>
+
+              {imagePreview && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="text-sm text-white bg-black bg-opacity-50 px-4 py-2 rounded-full">
+                    Click to change image
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
           <button
             type="submit"
-            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200"
           >
-            Add Core Member
+            Add Board Member
           </button>
         </form>
       </div>
 
-      {showNotification && (
-        <div
-          className={`fixed bottom-4 right-4 px-6 py-3 rounded-lg text-white ${
-            color === "green" ? "bg-green-500" : "bg-red-500"
-          }`}
-        >
-          <p>{notificationMessage}</p>
-          <button
-            onClick={() => setShowNotification(false)}
-            className="absolute top-2 right-2 text-white"
-          >
-            ×
-          </button>
-        </div>
-      )}
+      <Notification
+        message={notificationMessage}
+        show={showNotification}
+        color={color}
+        className="mt-32"
+        closeNotification={() => setShowNotification(false)}
+      />
     </div>
   );
 };
 
-export default AddCore;
+export default AddBoard;

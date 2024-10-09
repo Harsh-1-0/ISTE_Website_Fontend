@@ -1,10 +1,14 @@
+"use client";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
 
 function Card(props) {
   return (
-    <div className="w-full max-w-md bg-gray-100 border-4 border-black flex flex-col md:flex-row overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+    <div
+      onClick={props.onClick}
+      className="w-full cursor-pointer  max-w-md bg-gray-100 border-4 border-black flex flex-col md:flex-row overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+    >
       <div
         className="w-full md:w-2/5 lg:w-1/2 relative aspect-[16/9] md:aspect-square bg-contain bg-no-repeat border-black max-md:border-b-4 max-md:border-0 border-r-4 bg-center grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
         style={{ backgroundImage: `url(${props.image})` }}
@@ -20,7 +24,6 @@ function Card(props) {
           <p className="text-lg mt-2 text-gray-600">{props.domain}</p>
         </div>
         <div className="grid grid-cols-2 w-full text-2xl md:text-4xl border-t-4 border-black">
-          {/* LinkedIn Icon */}
           <div className="border-r-2 border-black p-5 grid place-items-center">
             <a
               href={props.linkedin}
@@ -30,7 +33,6 @@ function Card(props) {
               <FaLinkedin className="text-5xl" />
             </a>
           </div>
-          {/* Globe Icon */}
           <div className="border-l-2 border-black p-5 grid place-items-center">
             <a
               href={props.connectlink}
