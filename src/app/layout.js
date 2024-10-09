@@ -9,11 +9,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="font-anton min-h-screen flex flex-col justify-between">
+    <html lang="en" className="w-full">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
+      <body className="font-anton flex flex-col justify-between max-md:w-[100vh] ">
         <Navbar />
-        {children}
-        {/* <Footer /> */}
+        <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
