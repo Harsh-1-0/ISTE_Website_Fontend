@@ -12,14 +12,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className="w-full">
       <head>
         <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body className="font-anton flex flex-col justify-between max-md:w-[100vh] ">
+      <body className="font-anton  flex flex-col justify-between w-[full] min-h-screen overflow-x-hidden">
         <Navbar />
         <div>{children}</div>
         <Footer />

@@ -45,7 +45,7 @@ const Core = () => {
 
   return (
     <div>
-      <Nav handleSearch={handleSearch} />
+      {!loading && <Nav handleSearch={handleSearch} />}
       <div className="flex flex-wrap gap-5  items-center max-lg:justify-center justify-between p-5">
         {loading ? (
           <CardSkeleton cards={15} />

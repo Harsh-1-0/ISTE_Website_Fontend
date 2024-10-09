@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  
+input,
+textarea {
+  font-size: 16px; /* Ensures that the browser does not zoom in */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This helps manage element sizes better */
 }
 
 @font-face {

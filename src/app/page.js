@@ -20,7 +20,7 @@ export default function Home() {
       <Domainsec />
       <Projectsembed />
       <Eventshero />
-      <Webinarmain />
+      {/* <Webinarmain /> */}
       <Partners />
     </main>
   );

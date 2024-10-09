@@ -20,7 +20,7 @@ function Nav({ handleSearch }) {
   }, []);
 
   return (
-    <div className="flex justify-between my-3  max-md:text-4xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg px-3">
+    <div className="flex justify-between my-3 p-4 max-sm:text-2xl   max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg px-3">
       <div className="flex gap-5 max-md:gap-3  text-center">
         <div className="hover:text-[#27A5EF] duration-500">
           <a href="/team/faculty"> Coordinator</a>
