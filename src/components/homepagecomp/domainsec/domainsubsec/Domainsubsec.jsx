@@ -3,17 +3,17 @@ const Domainsubsec = () => {
   const domainroll = [
     {
       domainname: "MANAGEMENT",
-      imgpath: "/Pictures/managementdomain.png",
+      imgpath: "/Pictures/gifs/managementgif.mp4",
       description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
     },
     {
       domainname:"DESIGN",
-      imgpath: "/Pictures/designdomain.png",
+      imgpath: "/Pictures/gifs/designgif.mp4",
       description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
     },
     {
       domainname:"TECHNICAL",
-      imgpath: "/Pictures/technicaldomain.png",
+      imgpath: "/Pictures/gifs/designgif.mp4",
       description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
     }
   ]

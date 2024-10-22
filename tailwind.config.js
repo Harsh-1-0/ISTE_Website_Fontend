@@ -1,26 +1,37 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        hamlin: ["Hamlin", "sans-serif"],
-        anton: ["Anton", "sans-serif"],
-      },
-      animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
-      },
-      keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(40%)" },
-        },
-      },
-    },
+  	extend: {
+  		fontFamily: {
+  			hamlin: ["Hamlin", "sans-serif"],
+  			anton: ["Anton", "sans-serif"]
+  		},
+  		animation: {
+  			'infinite-scroll': 'infinite-scroll 25s linear infinite'
+  		},
+  		keyframes: {
+  			'infinite-scroll': {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(40%)'
+  				}
+  			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		colors: {}
+  	}
   },
   plugins: [
     function ({ addUtilities }) {
@@ -42,5 +53,6 @@ module.exports = {
         },
       });
     },
-  ],
+      require("tailwindcss-animate")
+],
 };

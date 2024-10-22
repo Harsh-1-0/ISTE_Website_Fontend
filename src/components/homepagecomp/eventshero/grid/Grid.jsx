@@ -16,7 +16,7 @@ const Grid = () => {
     }
   ]
   return ( 
-    <div className="flex flex-col grayscale hover:grayscale-0 transition-all duration-150 mx-20">
+    <div className="flex flex-col grayscale hover:grayscale-0 transition-all duration-150">
       {gridpaths.map((path=>(
         <Gridlink item={path} key={path.title}/>
       )))}

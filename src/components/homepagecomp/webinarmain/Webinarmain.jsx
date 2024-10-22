@@ -1,6 +1,12 @@
 "use client";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
 import Link from "next/link";
 import Image from "next/image";
 const Webinarmain = () => {
@@ -32,35 +38,28 @@ const Webinarmain = () => {
     },
   ];
   return (
-    <div className="relative w-full h-screen my-10 grayscale hover:grayscale-0 transition-all duration-150">
-      <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-[url('/Pictures/webinarbg.png')]">
-        <div className="p-4">
-          <Carousel
-            showThumbs={false}
-            autoPlay={true}
-            infiniteLoop={true}
-            useKeyboardArrows={true}
-            interval={3000}
-            showArrows={false}
-            swipeable={true}
-            centerMode
-          >
-            {webinarcontent.map((item, key) => (
-              <Link key={key} href={item.path}>
-                <div className="mx-10">
-                  <Image
-                    alt={`Webinar about ${item.title}`} // More descriptive alt text
-                    src={item.imgpath}
-                    height={1080}
-                    width={1080}
-                  />
-                </div>
-              </Link>
+    <div className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden">
+      <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-[url('/Pictures/webinarbg.png')] bg-fixed bg-center bg-repeat">
+        <div className="absolute inset-0 justify-center">
+        <Carousel opts={{
+            align: "center",
+            loop: true,
+          }} plugins={[
+            Autoplay({
+              delay:5000,
+            }),
+          ]}>
+            <CarouselContent>
+            {webinarcontent.map((item)=>(
+              <CarouselItem className="md:pl-44"><Link href={item.path}><div className="mx-10" key={item.title}><Image src={item.imgpath} height={1080} width={1080} className="w-fit h-fit mt-9 md:mt-36 md:w-[1080px] md:h-[600px]"/></div></Link></CarouselItem>
             ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>
-      <div className="w-full h-full relative z-10">
+      <div className="md:w-full md:h-full relative z-10">
         <video
           src="/Videos/webinarbgrun.mp4"
           autoPlay

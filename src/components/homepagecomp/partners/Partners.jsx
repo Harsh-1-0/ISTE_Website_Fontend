@@ -1,4 +1,13 @@
+'use client'
 import Partnerin from "./partnerin/Partnerin";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
 const Partners = () => {
   const partnersroll = [
     {
@@ -61,14 +70,32 @@ const Partners = () => {
     }
   ]
   return ( 
-    <div className="flex flex-col justify-center items-center my-16">
+    <div className="flex flex-col justify-center items-center my-4 md:my-16">
       <div className="text-6xl md:text-8xl lg:text-9xl py-4 border-black border-b-4">PARTNERS</div>
-      <div className="grid grid-cols-4 gap-4 my-8 ">
+      <div className="hidden md:grid md:grid-cols-4 md:gap-4 my-8">
         {partnersroll.map((link)=>(
           <Partnerin srcval={link} key={link.title}/>
         ))}
       </div>
-      <div className="font-hamlin text-xl">&#9679; you have reached the end &#9679;</div>
+      <div className="flex md:hidden my-10 md:my-0">
+      <Carousel opts={{
+            align: "center",
+            loop: true,
+          }} plugins={[
+            Autoplay({
+              delay:4000,
+            }),
+          ]}>
+            <CarouselContent>
+            {partnersroll.map((link)=>(
+              <CarouselItem><Partnerin srcval={link} key={link.title}/></CarouselItem>
+            ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+      </Carousel>
+      </div>
+      <div className="font-hamlin text-lg md:text-xl">&#9679; you have reached the end &#9679;</div>
     </div>
    );
 }

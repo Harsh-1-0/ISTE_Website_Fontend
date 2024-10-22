@@ -2,15 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-input,
-textarea {
-  font-size: 16px; /* Ensures that the browser does not zoom in */
-}
-
-* {
+body{
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* This helps manage element sizes better */
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -48,3 +43,13 @@ textarea {
 .bg-gradient-animate {
   animation: gradientShift 5s infinite ease-in-out;
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+/* *{
+  outline: 1px solid red;
+} */

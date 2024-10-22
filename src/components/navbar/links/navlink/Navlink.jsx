@@ -5,7 +5,7 @@ const Navlink = ({ item, handleClick }) => {
     <Link
       href={item.path}
       onClick={handleClick}
-      className="px-3 py-3 hover:bg-white hover:text-black md:hover:bg-black md:hover:text-white"
+      className="px-3 py-2 hover:bg-white hover:text-black md:hover:bg-black md:hover:text-white"
     >
       {item.title}
     </Link>

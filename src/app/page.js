@@ -11,17 +11,37 @@ import Partners from "@/components/homepagecomp/partners/Partners";
 
 export default function Home() {
   return (
-    <main className="mt-20 md:mt-24 ">
-      <Heropage />
-      <Videoback />
-      <Upcominganim />
-      <Horizonembed />
-      <Aboutus />
-      <Domainsec />
-      <Projectsembed />
-      <Eventshero />
-      {/* <Webinarmain /> */}
-      <Partners />
+    <main className="mt-20 md:mt-24 overflow-x-hidden w-full">
+      <div className="w-full">
+        <Heropage />
+      </div>
+      <div className="w-full">
+        <Videoback />
+      </div>
+      <div className="w-full">
+        <Upcominganim />
+      </div>
+      <div className="w-full">
+        <Horizonembed />
+      </div>
+      <div className="w-full">
+        <Aboutus />
+      </div>
+      <div className="w-full">
+        <Domainsec />
+      </div>
+      <div className="w-full">
+        <Projectsembed />
+      </div>
+      <div className="w-full">
+        <Eventshero />
+      </div>
+      <div className="w-full">
+        <Webinarmain />
+      </div>
+      <div className="w-full">
+        <Partners />
+      </div>
     </main>
   );
 }
