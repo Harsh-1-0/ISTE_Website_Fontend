@@ -178,7 +178,12 @@ const Dashboard = () => {
           >
             Update Upcoming Event{" "}
           </button>
-          <button className="w-full border border-[#3B1E54] text-[#3B1E54] py-2 px-4 rounded-lg hover:bg-[#3B1E54] hover:text-white transition-colors mb-2">
+          <button
+            onClick={() =>
+              (window.location.href = "/admin/1007/events/addevents")
+            }
+            className="w-full border border-[#3B1E54] text-[#3B1E54] py-2 px-4 rounded-lg hover:bg-[#3B1E54] hover:text-white transition-colors mb-2"
+          >
             Add Events{" "}
           </button>
           <button className="w-full border border-[#3B1E54] text-[#3B1E54] py-2 px-4 rounded-lg hover:bg-[#3B1E54] hover:text-white transition-colors">
