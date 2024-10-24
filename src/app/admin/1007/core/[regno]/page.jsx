@@ -38,10 +38,23 @@ export default function Page({ params }) {
     };
 
     getData();
-    function checkRole() {
-      const roles = localStorage.getItem("role");
-      if (roles == 1 || roles == 2) {
-        setRole(true);
+    async function checkRole() {
+      try {
+        const response1 = await axios.get(
+          "https://iste-website-api.vercel.app/admin/dashboard",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const roles = response1.data.role;
+
+        if (roles == 1 || roles == 2) {
+          setRole(true);
+        }
+      } catch (err) {
+        console.log(err);
       }
     }
     checkRole();

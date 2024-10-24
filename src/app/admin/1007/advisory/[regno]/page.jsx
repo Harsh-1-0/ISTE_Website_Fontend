@@ -37,10 +37,23 @@ export default function Page({ params }) {
     };
 
     getData();
-    function checkRole() {
-      const roles = localStorage.getItem("role");
-      if (roles == 1 || roles == 2) {
-        setRole(true);
+    async function checkRole() {
+      try {
+        const response1 = await axios.get(
+          "https://iste-website-api.vercel.app/admin/dashboard",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const roles = response1.data.role;
+
+        if (roles == 1 || roles == 2) {
+          setRole(true);
+        }
+      } catch (err) {
+        console.log(err);
       }
     }
     checkRole();
@@ -329,7 +342,7 @@ export default function Page({ params }) {
                         accept="image/*"
                       />
                     </div>
-                    <p className="text-xs text-gray-500">PNG, JPG up to 10MB</p>
+                    <p className="text-xs text-gray-500">WEBP up to 5MB</p>
                   </div>
                 </div>
               </div>

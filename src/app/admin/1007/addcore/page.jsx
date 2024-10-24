@@ -123,7 +123,6 @@ const AddCore = () => {
                 Surname
               </label>
               <input
-                required
                 autoComplete="off"
                 type="text"
                 name="surname"
