@@ -1,5 +1,6 @@
 function addEvent() {
-  return <></>;
+  return <>
+  </>;
 }
 
 export default addEvent;

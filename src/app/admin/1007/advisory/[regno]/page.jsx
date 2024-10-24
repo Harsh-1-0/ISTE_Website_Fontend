@@ -43,13 +43,13 @@ export default function Page({ params }) {
           "https://iste-website-api.vercel.app/admin/dashboard",
           {
             headers: {
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${tokenISTE}`,
             },
           }
         );
-        const roles = response1.data.role;
-
-        if (roles == 1 || roles == 2) {
+        console.log(response1);
+        let role = response1.data.role;
+        if (role == 1 || role == 2) {
           setRole(true);
         }
       } catch (err) {
@@ -57,7 +57,7 @@ export default function Page({ params }) {
       }
     }
     checkRole();
-  }, [regno]);
+  }, [regno, tokenISTE]);
 
   const [Data, setFormData] = useState({
     name: "",

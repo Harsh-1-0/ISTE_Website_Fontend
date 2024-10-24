@@ -230,7 +230,7 @@ const AddCore = () => {
                     height={128}
                     width={128}
                     alt="Preview"
-                    className="mx-auto h-32 w-32 object-cover rounded-full"
+                    className="mx-auto h-32 w-32 object-cover "
                   />
                 ) : (
                   <Upload className="mx-auto h-12 w-12 text-gray-400" />
@@ -250,7 +250,7 @@ const AddCore = () => {
                     accept="image/*"
                   />
                 </div>
-                <p className="text-xs text-gray-500">PNG, JPG up to 10MB</p>
+                <p className="text-xs text-gray-500">WebP up to 5MB</p>
               </div>
             </div>
           </div>
