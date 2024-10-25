@@ -72,10 +72,10 @@ const Core = () => {
   };
 
   return (
-    <div>
+    <div className="p-4">
       {!loading && <Nav handleSearch={handleSearch} />}
       {loading ? (
-        <div className="flex flex-wrap gap-5 items-center max-lg:justify-center justify-between p-5">
+        <div className="flex flex-wrap gap-2 items-center max-lg:justify-center justify-between ">
           <CardSkeleton cards={12} />
         </div>
       ) : (
@@ -92,11 +92,11 @@ const Core = () => {
             <p className="text-center p-4 text-gray-500">
               {filteredResponse.length === 0
                 ? "No results found"
-                : "Thats Our Lovely Core"}
+                : "Thats Our Lovely Core ❤️"}
             </p>
           }
         >
-          <div className="flex flex-wrap gap-5 items-center max-lg:justify-center justify-between p-5">
+          <div className="flex flex-wrap gap-8  items-center max-lg:justify-center justify-between px-16">
             {filteredResponse.map((item) => (
               <Card
                 key={item._id}
