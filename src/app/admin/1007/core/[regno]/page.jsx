@@ -126,7 +126,7 @@ export default function Page({ params }) {
         }
       );
 
-      if (response.status === 201 || response.status === 200) {
+      if (response.status === 200 || response.status === 204) {
         setNotificationMessage("Core Member Updated Successfully");
         setShowNotification(true);
         setColor("green");

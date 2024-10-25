@@ -164,9 +164,6 @@ const Dashboard = () => {
           >
             Add Photos
           </button>
-          <button className="w-full border border-[#8967B3] text-[#8967B3] py-2 px-4 rounded-lg hover:bg-[#8967B3] hover:text-white transition-colors">
-            Delete Photos
-          </button>
         </div>
         <div className="bg-gray-100 p-6  rounded-lg shadow-md">
           <h2 className="text-lg font-semibold mb-4">Events Section</h2>
@@ -186,9 +183,14 @@ const Dashboard = () => {
           >
             Add Events{" "}
           </button>
-          <button className="w-full border border-[#3B1E54] text-[#3B1E54] py-2 px-4 rounded-lg hover:bg-[#3B1E54] hover:text-white transition-colors">
-            Update Events{" "}
-          </button>
+          {val1 && (
+            <button
+              onClick={() => (window.location.href = "/admin/1007/events")}
+              className="w-full border border-[#3B1E54] text-[#3B1E54] py-2 px-4 rounded-lg hover:bg-[#3B1E54] hover:text-white transition-colors"
+            >
+              Delete Events{" "}
+            </button>
+          )}
         </div>
       </div>
     </div>

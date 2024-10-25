@@ -7,6 +7,7 @@ const PastEventsCard = ({
   speaker,
   description,
   galleryImages = [],
+  button,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imagePositions, setImagePositions] = useState([]);
