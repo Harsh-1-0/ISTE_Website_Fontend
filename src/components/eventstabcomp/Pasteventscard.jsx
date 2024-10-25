@@ -14,10 +14,12 @@ const PastEventsCard = ({
   // Calculate random positions when hover state changes
   useEffect(() => {
     if (isHovered) {
-      const positions = galleryImages.slice(0, 3).map(() => ({
-        top: Math.random() * (window.innerHeight - 256), // 256 is image height
-        left: Math.random() * (window.innerWidth - 256), // 256 is image width
-      }));
+      const positions = galleryImages
+        .slice(0, galleryImages.length)
+        .map(() => ({
+          top: Math.random() * (window.innerHeight - 256), // 256 is image height
+          left: Math.random() * (window.innerWidth - 256), // 256 is image width
+        }));
       setImagePositions(positions);
     }
   }, [isHovered, galleryImages]);

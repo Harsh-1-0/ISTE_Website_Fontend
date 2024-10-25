@@ -16,6 +16,7 @@ function AddEvent() {
   const [tokenISTE, setTokenISTE] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [eventImages, setEventImage] = useState([]);
   const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -47,10 +48,9 @@ function AddEvent() {
   const validateForm = () => {
     const errors = {};
     if (!formData.title.trim()) errors.title = "Event name is required";
-    if (!formData.speaker.trim()) errors.speaker = "Speaker name is required";
+
     if (!formData.description.trim())
       errors.description = "Description is required";
-    if (!formData.venue.trim()) errors.venue = "Venue is required";
     if (!image) errors.image = "Event banner is required";
 
     setFormErrors(errors);
@@ -67,18 +67,22 @@ function AddEvent() {
   };
 
   const handleFile = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+    const files = Array.from(e.target.files);
+    if (files.length === 0) return;
 
-    // File validation
-    if (file.size > MAX_FILE_SIZE) {
+    // Separate the first file as the priority file
+    const primaryFile = files[0];
+    const remainingFiles = files.slice(1); // All files except the first one
+
+    // File validation for primary file
+    if (primaryFile.size > MAX_FILE_SIZE) {
       setNotificationMessage("File size must be less than 5MB");
       setColor("red");
       setShowNotification(true);
       return;
     }
 
-    if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+    if (!ALLOWED_FILE_TYPES.includes(primaryFile.type)) {
       setNotificationMessage("Only WEBP images are allowed");
       setColor("red");
       setShowNotification(true);
@@ -90,8 +94,12 @@ function AddEvent() {
       URL.revokeObjectURL(imagePreview);
     }
 
-    setImage(file);
-    setImagePreview(URL.createObjectURL(file));
+    setImage(primaryFile);
+    setImagePreview(URL.createObjectURL(primaryFile));
+
+    // Handle the remaining files
+    setEventImage(remainingFiles);
+
     if (formErrors.image) {
       setFormErrors((prev) => ({ ...prev, image: "" }));
     }
@@ -107,7 +115,12 @@ function AddEvent() {
       formDataToSend.append(key, formData[key]);
     });
     formDataToSend.append("eventimage", image);
+    console.log(eventImages);
+    eventImages.forEach((file) => {
+      formDataToSend.append("eventGallery", file);
+    });
 
+    console.log(formDataToSend);
     try {
       const response = await axios.post(
         "https://iste-website-api.vercel.app/event",
@@ -257,6 +270,7 @@ function AddEvent() {
                 <input
                   ref={fileInputRef}
                   type="file"
+                  multiple
                   name="eventimage"
                   onChange={handleFile}
                   className="hidden"
@@ -265,6 +279,12 @@ function AddEvent() {
                 />
               </div>
               <p className="text-xs text-gray-500">WEBP up to 5MB</p>
+              <p className="text-xs text-gray-500">
+                You can Select 6 Images {"("}1 Banner + 5 Images {")"}
+              </p>
+              <p className="text-xs text-red-500">
+                Note: First Select The Event Banner then the Event Images
+              </p>
             </div>
           </div>
           {formErrors.image && (

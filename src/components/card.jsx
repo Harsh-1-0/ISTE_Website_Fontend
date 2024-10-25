@@ -7,12 +7,12 @@ function Card(props) {
   return (
     <div
       onClick={props.onClick}
-      className="group w-full cursor-pointer max-w-md bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
+      className="group w-full cursor-pointer max-w-sm bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
         transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
     >
       {/* Image Container with Animation */}
       <div
-        className="w-full md:w-2/5 lg:w-1/2 relative aspect-[16/9] md:aspect-square bg-contain bg-no-repeat 
+        className="w-full md:w-2/5 lg:w-1/2 relative aspect-[16/9]  bg-contain bg-no-repeat 
           border-black max-md:border-b-4 max-md:border-0 border-r-4 bg-center overflow-hidden"
       >
         <div
@@ -25,18 +25,18 @@ function Card(props) {
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-col justify-between w-full md:w-3/5 lg:w-2/3 transform transition-all duration-500">
+      <div className="flex flex-col  justify-between w-full md:w-3/5 lg:w-1/2 transform transition-all duration-500">
         {/* Text Content */}
         <div className="flex flex-col items-start py-2 px-5 mb-4">
           <h2
-            className="text-3xl md:text-4xl leading-tight transform transition-all duration-500 
+            className="text-3xl   leading-tight transform transition-all duration-500 
             translate-x-0 group-hover:translate-x-2"
           >
             {props.name}
           </h2>
 
           <h3
-            className="text-3xl md:text-4xl leading-tight transform transition-all duration-500 delay-75
+            className="text-3xl leading-tight transform transition-all duration-500 delay-75
             translate-x-0 group-hover:translate-x-2"
           >
             {props.surname}
