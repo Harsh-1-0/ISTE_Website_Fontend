@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  
   const handleClick = () => {
     setIsOpen(false);
   };
@@ -50,11 +50,13 @@ const Navbar = () => {
           </div>
         </a>
       </div>
-      <div className="flex items-center">
+      <div id="menu" className="flex items-center">
         <Links isOpen={isOpen} handleClick={handleClick} />
         <div className="md:hidden flex items-center ml-4">
           {!isOpen && (
-            <button onClick={() => setIsOpen(true)}>
+            <button onClick={() => {
+              setIsOpen(true);
+            }}>
               <GiHamburgerMenu size={30} />
             </button>
           )}
