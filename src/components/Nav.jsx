@@ -37,14 +37,14 @@ function Nav({ handleSearch }) {
       </div>
 
       {!isMwidth && (
-        <div className="relative">
+        <div className="relative flex flex-row items-center">
           <input
             type="text"
             onChange={handleSearch}
             placeholder="Search By Name"
             className="placeholder:text-black text-[#27A5EF] focus:border-[#27A5EF] border-black bg-white focus:outline-none pl-8"
           />
-          <IoIosSearch className="absolute left-0 top-0 text-black text-2xl" />
+          <IoIosSearch size={30} className="absolute left-0 top-0 text-black text-2xl -mx-2" />
         </div>
       )}
     </div>
