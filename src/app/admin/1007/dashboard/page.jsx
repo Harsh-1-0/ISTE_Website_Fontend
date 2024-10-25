@@ -160,7 +160,7 @@ const Dashboard = () => {
           <h2 className="text-lg font-semibold mb-4">Gallery Section</h2>
           <button
             className="w-full border border-[#8967B3] text-[#8967B3] py-2 px-4 rounded-lg hover:bg-[#8967B3] hover:text-white transition-colors mb-2"
-            onClick={() => (window.location.href = "/admin/1007/gallery")}
+            onClick={() => (window.location.href = "/admin/1007/addphotos")}
           >
             Add Photos
           </button>

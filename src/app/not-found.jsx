@@ -4,19 +4,21 @@ import { useState, useEffect } from "react";
 export default function NotFound() {
   const [audioReady, setAudioReady] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const [audio] = useState(
-    () =>
-      new Audio(
-        "https://res.cloudinary.com/dleuqns7p/video/upload/v1729866841/q22ncmffx7jiiqs6crgt.mp3"
-      )
-  );
 
   useEffect(() => {
+    // Only create the audio element in the browser
+    let audio;
+    if (typeof window !== "undefined") {
+      audio = new Audio(
+        "https://res.cloudinary.com/dleuqns7p/video/upload/v1729866841/q22ncmffx7jiiqs6crgt.mp3"
+      );
+    }
+
     const handleInteraction = () => {
       setHasInteracted(true);
     };
 
-    // Add listeners for common user interactions
+    // Add listeners for user interactions
     window.addEventListener("click", handleInteraction);
     window.addEventListener("keydown", handleInteraction);
     window.addEventListener("touchstart", handleInteraction);
@@ -28,20 +30,25 @@ export default function NotFound() {
       window.removeEventListener("touchstart", handleInteraction);
 
       // Cleanup audio
-      audio.pause();
-      audio.currentTime = 0;
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
     };
   }, []);
 
-  // Handle audio playback after user interaction
   useEffect(() => {
     if (hasInteracted && !audioReady) {
+      // Define and play audio only after interaction
+      const audio = new Audio(
+        "https://res.cloudinary.com/dleuqns7p/video/upload/v1729866841/q22ncmffx7jiiqs6crgt.mp3"
+      );
       audio
         .play()
         .then(() => setAudioReady(true))
         .catch((error) => console.error("Audio playback failed:", error));
     }
-  }, [hasInteracted, audioReady, audio]);
+  }, [hasInteracted, audioReady]);
 
   return (
     <div className="mt-24 md:mt-28 flex flex-col justify-center items-center">

@@ -62,6 +62,7 @@ function Card(props) {
           >
             <a
               href={props.linkedin}
+              target="_blank"
               className="transform transition-all duration-400 hover:scale-110 group-hover:text-blue-600"
               aria-label="LinkedIn Profile"
             >
@@ -81,7 +82,8 @@ function Card(props) {
             <a
               href={props.connectlink}
               className="transform transition-all duration-400 hover:scale-110 group-hover:text-[#27A5EF]"
-              aria-label="Personal Website"
+              target="_blank"
+              aria-label="Connct Link"
             >
               <SlGlobe className="text-5xl transform transition-all duration-400" />
               <span

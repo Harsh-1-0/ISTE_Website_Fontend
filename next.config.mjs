@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['iste-website-api.vercel.app'],
+    domains: ["iste-website-api.vercel.app"],
     remotePatterns: [
       {
         protocol: "https",

@@ -38,7 +38,10 @@ const Webinarmain = () => {
     },
   ];
   return (
-    <div className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden">
+    <div
+      id="webinar"
+      className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
+    >
       <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-[url('/Pictures/webinarbg.png')] bg-fixed bg-center bg-repeat">
         <div className="absolute inset-0 justify-center">
           <Carousel

@@ -3,7 +3,7 @@ import Pasteventscard from "@/components/eventstabcomp/Pasteventscard";
 import Upcomingeventscard from "@/components/eventstabcomp/Upcomingeventscard";
 import Eventsheader from "@/components/eventstabcomp/eventsheader/Eventsheader";
 import axios from "axios";
-import PasteventscardSkeleton from "@/components/eventstabcomp/Parenteventskeleton";
+import PasteventscardSkeleton from "@/components/eventstabcomp/UpcomingEventSkele";
 import { useEffect, useState } from "react";
 
 const Events = () => {
