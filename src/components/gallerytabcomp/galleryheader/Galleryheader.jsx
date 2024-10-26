@@ -3,7 +3,7 @@ const Galleryheader = () => {
   return ( 
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-nowrap md:my-1">
-        <p className="text-[45px] md:text-6xl lg:text-[200px] py-1 md:py-2">
+        <p className="text-[45px] md:text-6xl lg:text-[180px] py-1 md:py-2">
           BEHIND THE SCENES
         </p>
       </div>

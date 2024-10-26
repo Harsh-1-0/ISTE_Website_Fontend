@@ -1,71 +1,80 @@
 "use client";
+import PastEventsSkele from "@/components/eventstabcomp/PastSkele";
 import Pasteventscard from "@/components/eventstabcomp/Pasteventscard";
+import UpcomingEventSkele from "@/components/eventstabcomp/UpcomingEventSkele";
 import Upcomingeventscard from "@/components/eventstabcomp/Upcomingeventscard";
 import Eventsheader from "@/components/eventstabcomp/eventsheader/Eventsheader";
 import axios from "axios";
-import UpcomingSkele from "@/components/eventstabcomp/UpcomingEventSkele";
-import PastEventsSkele from "@/components/eventstabcomp/PastSkele";
 import { useEffect, useState } from "react";
 
 const Events = () => {
-  const [upcoming, setUpcoming] = useState(false);
-  const [events, setEvents] = useState(false);
+  const [upcoming, setUpcoming] = useState([]);
+  const [events, setEvents] = useState([]);
+
   useEffect(() => {
-    //get the data of upcoming into a card for upcoming
+    // Fetch upcoming events data
     const getUpcoming = async () => {
       try {
         const response = await axios.get(
           "https://iste-website-api.vercel.app/upcoming"
         );
         setUpcoming(response.data);
-        console.log(response.data);
       } catch (err) {
         console.log(err);
       }
     };
     getUpcoming();
-    //map the data of events into a card for events
+
+    // Fetch past events data
     const getEvents = async () => {
       try {
         const response = await axios.get(
           "https://iste-website-api.vercel.app/event"
         );
         setEvents(response.data);
-        console.log(response.data);
       } catch (err) {
         console.log(err);
       }
     };
     getEvents();
   }, []);
+
   return (
-    <div className="mt-20 md:mt-24 flex flex-col">
+    <div className="mt-20 md:mt-24 flex flex-col relative">
       <Eventsheader />
-
-      <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline">
-        Upcoming Event
-      </h1>
-
-      {upcoming ? (
-        <Upcomingeventscard
-          title={upcoming[0].title}
-          image={upcoming[0].image}
-          date={upcoming[0].date}
-          time={upcoming[0].time}
-          speaker={upcoming[0].speaker}
-          venue={upcoming[0].venue}
-          description={upcoming[0].description}
-        />
-      ) : (
-        <UpcomingSkele cards={1} />
-      )}
-
-      <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline">
+      <div className="relative w-full h-full my-2">
+        <video
+          src="/Pictures/eventsvid/upcomingbg.mp4"
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover z-10"
+        ></video>
+        {upcoming.length > 0 && (
+          <div className="absolute inset-0 flex items-center justify-center z-20">
+            {upcoming ? (
+              <Upcomingeventscard
+              title={upcoming[0].title}
+              image={upcoming[0].image}
+              date={upcoming[0].date}
+              time={upcoming[0].time}
+              speaker={upcoming[0].speaker}
+              venue={upcoming[0].venue}
+              description={upcoming[0].description}
+              />
+            ) :
+            (
+              <UpcomingEventSkele cards={1}/>
+            )}
+          </div>
+        )}
+      </div>
+      
+      <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
         Our Event
       </h1>
-
       {events ? (
-        <div className="flex flex-wrap p-8  justify-between">
+          <div className="flex flex-wrap p-8 justify-between z-30">
           {events.map((event, index) => (
             <Pasteventscard
               key={index}
@@ -78,8 +87,8 @@ const Events = () => {
             />
           ))}
         </div>
-      ) : (
-        <PastEventsSkele cards={12} />
+      ):(
+        <PastEventsSkele cards={3}/>
       )}
     </div>
   );
