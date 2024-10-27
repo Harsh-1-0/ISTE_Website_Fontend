@@ -54,7 +54,7 @@ const Gallery = () => {
         <Galleryheader />
       </div>
       {loading ? (
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-3 mx-12">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-3 mx-12 my-1">
           <Galleryskeleton imgs={12} />
         </div>
       ) : (
@@ -80,7 +80,7 @@ const Gallery = () => {
               onClick={() => setModel(false)}
             />
           </div>
-          <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-3 mx-12">
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4 p-3 mx-[50px] md:my-2">
             <Gallerycard gallery={gallery} getImg={getImg} />
           </div>
         </>
