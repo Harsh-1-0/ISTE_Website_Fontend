@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between border-b-white   border-b-2 text-sm items-end md:text-xl lg:text-2xl">
-        <div className="flex flex-col md:flex-row py-2">
+        <div className="hidden md:flex md:flex-row py-2">
           <div className="py-2 md:py-0 md:pr-2">
             <Link href="/projects">Projects</Link>
           </div>

@@ -14,7 +14,7 @@ const Heropage = () => {
           TECHNICAL EDUCATION
         </p>
       </div>
-      <div className="py-4px md:py-[6px] border-t-4 md:border-t-8 border-b-4 md:border-b-8 border-black w-11/12 flex justify-between items-center text-[22px] md:text-4xl lg:text-[58px] my-2 text-nowrap">
+      <div className="py-[4px] md:py-[6px] border-t-4 md:border-t-8 border-b-4 md:border-b-8 border-black w-11/12 flex justify-between items-center text-[22px] md:text-4xl lg:text-[58px] my-2 text-nowrap">
         <div>
           WELCOME TO{" "}
           <span className="hover:text-[#27A5EF] transition-all duration-150 ease-in-out">

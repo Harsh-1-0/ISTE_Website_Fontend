@@ -17,8 +17,8 @@ module.exports = {
   		},
   		animation: {
   			'infinite-scroll': 'infinite-scroll 25s linear infinite',
-        'slide-in-right': 'slideInRight 25s ease-out forwards',
-        'slide-in-left': 'slideInLeft 25s ease-out forwards',
+        'slide-in-right': 'slideInRight 3s ease-out forwards',
+        'slide-in-left': 'slideInLeft 3s ease-out forwards',
   		},
   		keyframes: {
   			'infinite-scroll': {
@@ -29,21 +29,13 @@ module.exports = {
   					transform: 'translateX(40%)'
   				}
   			},
-        'infinite-left': {
-          from : {
-            transform : 'translateX(100%)'
-          },
-          to : {
-            transform : 'translateX(-100%)'
-          }
-        },
         slideInRight: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(23%)' },
+          '0%': { transform: 'translateX(31%)' },
+          '100%': { transform: 'translateX(10%)' },
         },
         slideInLeft: {
-          '0%': { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(23%)' },
+          '0%': { transform: 'translateX(-1%)' },
+          '100%': { transform: 'translateX(20%)' },
         },
   		},
   		borderRadius: {
