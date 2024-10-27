@@ -4,6 +4,7 @@ import Pasteventscard from "@/components/eventstabcomp/Pasteventscard";
 import UpcomingEventSkele from "@/components/eventstabcomp/UpcomingEventSkele";
 import Upcomingeventscard from "@/components/eventstabcomp/Upcomingeventscard";
 import Eventsheader from "@/components/eventstabcomp/eventsheader/Eventsheader";
+import Tfvcard from "@/components/eventstabcomp/tfvcard/Tfvcard";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -69,7 +70,9 @@ const Events = () => {
           </div>
         )}
       </div>
-      
+      <div>
+        <Tfvcard/>
+      </div>
       <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
         Our Event
       </h1>
