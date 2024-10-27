@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex items-center justify-between text-3xl md:text-xl lg:text-3xl w-full fixed top-0 border-b-black border-b-4 p-4 z-30
+      className={`flex items-center justify-between text-3xl md:text-xl lg:text-3xl w-full fixed top-0 border-b-black border-b-4 p-2 md:p-4 z-30
     ${isScrolled || isOpen ? "bg-black" : "bg-white"}
     ${isScrolled || isOpen ? "text-white" : "text-black"}`}
     >
@@ -39,12 +39,12 @@ const Navbar = () => {
             alt="logo"
             width={45}
             height={45}
-            className="mx-2 w-12"
+            className="mx-2 w-8 md:w-12 "
           />
         </a>
         <a href="/">
           <div
-            className={`${isOpen || isScrolled ? "text-white" : "text-black"}`}
+            className={`${isOpen || isScrolled ? "text-white" : "text-black"} text-2xl md:text-xl lg:text-3xl`}
           >
             ISTE
           </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <button onClick={() => {
               setIsOpen(true);
             }}>
-              <GiHamburgerMenu size={30} />
+              <GiHamburgerMenu size={25} />
             </button>
           )}
           {isOpen && (

@@ -11,7 +11,7 @@ import Partners from "@/components/homepagecomp/partners/Partners";
 
 export default function Home() {
   return (
-    <main className="mt-20 md:mt-24 overflow-x-hidden w-full">
+    <main className="mt-14 md:mt-24 overflow-x-hidden w-full">
       <div className="w-full">
         <Heropage />
       </div>

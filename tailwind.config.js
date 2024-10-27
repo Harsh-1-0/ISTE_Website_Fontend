@@ -1,3 +1,5 @@
+const { transform } = require('next/dist/build/swc');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -7,13 +9,16 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
   	extend: {
   		fontFamily: {
   			hamlin: ["Hamlin", "sans-serif"],
   			anton: ["Anton", "sans-serif"]
   		},
   		animation: {
-  			'infinite-scroll': 'infinite-scroll 25s linear infinite'
+  			'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'slide-in-right': 'slideInRight 25s ease-out forwards',
+        'slide-in-left': 'slideInLeft 25s ease-out forwards',
   		},
   		keyframes: {
   			'infinite-scroll': {
@@ -23,7 +28,23 @@ module.exports = {
   				to: {
   					transform: 'translateX(40%)'
   				}
-  			}
+  			},
+        'infinite-left': {
+          from : {
+            transform : 'translateX(100%)'
+          },
+          to : {
+            transform : 'translateX(-100%)'
+          }
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(23%)' },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(23%)' },
+        },
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
