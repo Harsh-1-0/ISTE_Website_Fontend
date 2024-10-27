@@ -9,14 +9,14 @@ function useParallax(value, distance) {
 
 const DevsData = [
   {
-    name: "Gagan N Bangaragiri",
-    role: "DESIGNER",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
-  },
-  {
     name: "HARSH KUMAR SINHA",
     role: "Developer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964323/omvamc3841hskzen6j78.png",
+  },
+  {
+    name: "GAGAN N BANGARAGIRI",
+    role: "Designer",
+    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
   },
   {
     name: "SHANKAR BS",
@@ -24,7 +24,7 @@ const DevsData = [
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
   },
   {
-    name: "Aradhye Swarup",
+    name: "ARADHYE SWARUP",
     role: "Designer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/hvrssvhkrs2pufz72nxf.png",
   },
@@ -41,13 +41,16 @@ function ImageSection({ src, name, role }) {
       <motion.div
         ref={ref}
         className="w-96 h-96 relative transition-all duration-500 ease-linear"
-        style={{ rotate }}
+        style={{
+          rotate,
+          boxShadow: "0px 20px 20px 0px rgba(0,0,0,0.2)",
+        }}
       >
         <NextImage
           fill
           src={src}
           alt="Devs Images"
-          className="w-full grayscale group-hover:grayscale-0 h-full object-cover"
+          className="w-full border-x-8 border-black grayscale group-hover:grayscale-0 h-full object-cover"
         />
       </motion.div>
 
@@ -59,7 +62,7 @@ function ImageSection({ src, name, role }) {
       </motion.h2>
       <motion.h2
         style={{ y }}
-        className="right-10 max-md:mt-48 max-md:text-xl max-md:hover:2xl font-anton group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl font-bold text-black mix-blend-difference"
+        className="right-10 max-md:mt-48 max-md:text-xl max-md:hover:2xl font-hamlin  group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl  text-black mix-blend-difference"
       >
         {role}
       </motion.h2>

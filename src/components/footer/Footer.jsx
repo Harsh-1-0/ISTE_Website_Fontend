@@ -19,7 +19,7 @@ const Footer = () => {
             <Link href="https://istevit.in" className="underline">
               iste@vit.ac.in
             </Link>
-            <p>+91 70114 22095</p>
+            <p>+91 83289 26213</p>
           </div>
         </div>
         <div className="flex pb-20 ">
@@ -67,7 +67,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between border-b-white   border-b-2 text-sm items-end md:text-xl lg:text-2xl">
         <div className="flex flex-col md:flex-row py-2">
-          <div className="py-2 md:py-0">
+          <div className="py-2 md:py-0 md:pr-2">
             <Link href="/projects">Projects</Link>
           </div>
           <div className="px-1 py-2 md:py-0 md:px-2">
@@ -80,7 +80,7 @@ const Footer = () => {
             <Link href="/team">Team</Link>
           </div>
           <div className="px-1 py-2 md:py-0 md:px-2">
-            <Link href="/devs">Developers💜</Link>
+            <Link href="/devs">Developers</Link>
           </div>
         </div>
         <div className="text-sm py-2 md:text-xl lg:text-2xl">
