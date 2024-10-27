@@ -43,7 +43,7 @@ const Core = () => {
 
   return (
     <div>
-      {!loading && <Nav handleSearch={handleSearch} />}
+      {!loading && <Nav handleSearch={handleSearch} active={"board"} />}
       <div className="flex flex-wrap gap-5  items-center max-lg:justify-center justify-between p-5">
         {loading ? (
           <CardSkeleton cards={15} />

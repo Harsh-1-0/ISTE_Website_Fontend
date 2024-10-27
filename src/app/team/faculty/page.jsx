@@ -6,9 +6,12 @@ function Faculty() {
   return (
     <div className="flex flex-col">
       <div className="my-3 p-4 max-sm:text-2xl   max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg px-3">
-        <div className="flex gap-5 max-md:gap-3  text-center">
+        <div className="flex gap-5 max-md:gap-3 font-hamlin text-center">
           <div className="hover:text-[#27A5EF] duration-500">
-            <a href="/team/faculty"> Coordinator</a>
+            <a href="/team/faculty" className=" underline">
+              {" "}
+              Coordinator
+            </a>
           </div>
           <div className="hover:text-[#27A5EF] duration-500">
             <a href="/team/advisory"> Advisory</a>
@@ -40,7 +43,7 @@ function Faculty() {
           </div>
 
           {/* Content Container */}
-          <div className="flex flex-col justify-between w-full md:w-1/2 transform transition-all duration-500">
+          <div className="flex flex-col justify-between md:w-1/2 transform transition-all duration-500">
             <div className="flex flex-col items-start py-6 px-2 mb-6">
               <h2 className="text-[40px] leading-tight transform transition-all duration-500 group-hover:translate-x-2">
                 DR. AMIT B

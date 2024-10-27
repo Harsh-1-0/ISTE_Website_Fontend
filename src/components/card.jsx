@@ -25,7 +25,7 @@ function Card(props) {
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-col  justify-between w-full md:w-3/5 lg:w-1/2 transform transition-all duration-500">
+      <div className="flex flex-col   justify-between w-full md:w-3/5 lg:w-1/2 transform transition-all duration-500">
         {/* Text Content */}
         <div className="flex flex-col items-start py-2 px-5 mb-4">
           <h2
@@ -36,14 +36,14 @@ function Card(props) {
           </h2>
 
           <h3
-            className="text-3xl leading-tight transform transition-all duration-500 delay-75
+            className="text-2xl leading-tight transform transition-all duration-500 delay-75
             translate-x-0 group-hover:translate-x-2"
           >
             {props.surname}
           </h3>
 
           <p
-            className="text-xl mt-2 font-hamlin font-bold text-gray-600 transform transition-all duration-500 delay-100
+            className="text-xl mt-2 font-hamlin  text-gray-600 transform transition-all duration-500 delay-100
             translate-x-0 group-hover:translate-x-2 opacity-90 group-hover:opacity-100"
           >
             {props.domain}

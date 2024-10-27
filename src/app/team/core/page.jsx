@@ -66,14 +66,19 @@ const Core = () => {
       const filteredData = response.filter((item) =>
         item.name.toLowerCase().includes(searchQuery)
       );
-      setFilteredResponse(filteredData);
+      const filteredDataDomain = response.filter((item) =>
+        item.domain.toLowerCase().includes(searchQuery)
+      );
+      const newDataSet = new Set([...filteredData, ...filteredDataDomain]);
+      const newData = [...newDataSet];
+      setFilteredResponse(newData);
       setHasMore(false); // Disable infinite scroll during search
     }
   };
 
   return (
     <div className="p-4">
-      {!loading && <Nav handleSearch={handleSearch} />}
+      {!loading && <Nav handleSearch={handleSearch} active={"core"} />}
       {loading ? (
         <div className="flex flex-wrap gap-2 items-center max-lg:justify-center justify-between ">
           <CardSkeleton cards={12} />
