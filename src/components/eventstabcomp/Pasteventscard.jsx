@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -11,7 +12,7 @@ const PastEventsCard = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imagePositions, setImagePositions] = useState([]);
-
+  const [isMobile, setIsMobile] = useState(false);
   // Calculate random positions when hover state changes
   useEffect(() => {
     if (isHovered) {
@@ -24,7 +25,17 @@ const PastEventsCard = ({
       setImagePositions(positions);
     }
   }, [isHovered, galleryImages]);
-
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
   return (
     <>
       {/* Main Card */}
@@ -66,25 +77,28 @@ const PastEventsCard = ({
 
       {/* Floating Gallery Images */}
       {isHovered &&
-        galleryImages.slice(0, 3).map((galleryImage, index) => (
-          <div
-            key={index}
-            className="fixed z-50 w-64 h-64"
-            style={{
-              top: `${imagePositions[index]?.top}px`,
-              left: `${imagePositions[index]?.left}px`,
-              animation: "fadeSlideUp 0.5s ease forwards",
-              animationDelay: `${index * 100}ms`,
-            }}
-          >
-            <Image
-              src={galleryImage}
-              alt="Event Gallery Image"
-              fill
-              className="  transition-all duration-500 hover:scale-105 hover:shadow-xl"
-            />
-          </div>
-        ))}
+        !isMobile &&
+        galleryImages
+          .slice(0, galleryImages.length)
+          .map((galleryImage, index) => (
+            <div
+              key={index}
+              className="fixed z-50 w-64 h-64"
+              style={{
+                top: `${imagePositions[index]?.top}px`,
+                left: `${imagePositions[index]?.left}px`,
+                animation: "fadeSlideUp 0.5s ease forwards",
+                animationDelay: `${index * 100}ms`,
+              }}
+            >
+              <Image
+                src={galleryImage}
+                alt="Event Gallery Image"
+                fill
+                className="  transition-all duration-500 hover:scale-105 hover:shadow-xl"
+              />
+            </div>
+          ))}
 
       <style jsx global>{`
         @keyframes fadeSlideUp {

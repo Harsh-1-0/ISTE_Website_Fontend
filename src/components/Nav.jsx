@@ -72,8 +72,8 @@ function Nav({ handleSearch, active }) {
             }
             className={
               isActive[3]
-                ? "placeholder:text-black placeholder:text-2xl   text-[#27A5EF] focus:border-[#27A5EF] border-black bg-white focus:outline-none pl-8"
-                : "placeholder:text-black   text-[#27A5EF] focus:border-[#27A5EF] border-black bg-white focus:outline-none pl-8"
+                ? "placeholder:text-black font-hamlin placeholder:text-xl   text-[#27A5EF] focus:border-[#27A5EF] border-black bg-white focus:outline-none pl-8"
+                : "placeholder:text-black font-hamlin  text-[#27A5EF] focus:border-[#27A5EF] border-black bg-white focus:outline-none pl-8"
             }
           />
           <IoIosSearch

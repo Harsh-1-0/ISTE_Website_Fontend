@@ -6,6 +6,7 @@ import axios from "axios";
 import Nav from "@/components/Nav";
 import InfiniteScroll from "react-infinite-scroll-component";
 import dotenv from "dotenv";
+import Image from "next/image";
 dotenv.config();
 const Core = () => {
   const [response, setResponse] = useState([]);
@@ -13,7 +14,7 @@ const Core = () => {
   const [loading, setLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(1);
-  const itemsPerPage = 12; // Number of cards to load per page
+  const itemsPerPage = 9; // Number of cards to load per page
 
   useEffect(() => {
     const getData = async () => {
@@ -95,10 +96,18 @@ const Core = () => {
             </div>
           }
           endMessage={
-            <p className="text-center p-4 text-gray-500">
+            <p className="text-center flex justify-center items-center p-4 font-hamlin text-gray-500">
               {filteredResponse.length === 0
                 ? "No results found"
-                : "Thats Our Lovely Core ❤️"}
+                : "Thats Our Lovely Core "}
+              {filteredResponse && (
+                <Image
+                  src="https://res.cloudinary.com/dleuqns7p/image/upload/v1730130545/iyp3bwhmeogekcncsnk4.png"
+                  alt="ISTE Heart"
+                  width={25}
+                  height={25}
+                />
+              )}
             </p>
           }
         >

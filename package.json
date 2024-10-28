@@ -31,6 +31,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-loading-skeleton": "^3.4.0",
     "react-responsive-carousel": "^3.2.23",
+    "react-typewriter-effect": "^1.1.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

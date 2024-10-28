@@ -1,8 +1,5 @@
-import Image from "next/image";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 const PastEventsSkele = ({ cards }) => {
-  // Calculate random positions when hover state changes
-
   return (
     <>
       <SkeletonTheme baseColor="#3C3D37" highlightColor="#181C14">
@@ -22,15 +19,15 @@ const PastEventsSkele = ({ cards }) => {
                 {/* Content Container */}
                 <div className="flex flex-col border-t-4 border-black p-4 md:p-6 transform transition-all duration-500">
                   <h2 className="text-lg md:text-3xl font-bold mb-2 md:mb-3 transform transition-all duration-500 group-hover:translate-x-2">
-                    <Skeleton height={30} width="75%" />
+                    <Skeleton height={40} width="75%" />
                   </h2>
 
                   <h3 className="text-sm md:text-xl text-gray-700 mb-2 transform transition-all duration-500 delay-75 group-hover:translate-x-2">
-                    <Skeleton height={30} width="75%" />
+                    <Skeleton height={30} width="60%" />
                   </h3>
 
                   <p className="text-sm md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
-                    <Skeleton height={30} width="75%" />
+                    <Skeleton height={30} width="50%" />
                   </p>
                 </div>
               </div>
