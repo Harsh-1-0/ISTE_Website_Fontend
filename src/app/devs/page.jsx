@@ -40,7 +40,7 @@ function ImageSection({ src, name, role }) {
     <div className="relative group min-h-screen flex items-center justify-center">
       <motion.div
         ref={ref}
-        className="w-96 h-96 relative transition-all duration-500 ease-linear"
+        className="w-80 h-80 relative transition-all duration-500 ease-linear"
         style={{
           rotate,
           boxShadow: "0px 20px 20px 0px rgba(0,0,0,0.2)",
@@ -56,13 +56,13 @@ function ImageSection({ src, name, role }) {
 
       <motion.h2
         style={{ y }}
-        className="left-10 max-md:text-2xl max-md:hover:3xl font-anton group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl font-bold text-black mix-blend-difference"
+        className="left-10 max-md:text-2xl max-md:3xl max-md:text-[#27A5EF] font-anton  group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl font-bold text-black mix-blend-difference"
       >
         {name}
       </motion.h2>
       <motion.h2
         style={{ y }}
-        className="right-10 max-md:mt-48 max-md:text-xl max-md:hover:2xl font-hamlin  group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl  text-black mix-blend-difference"
+        className="right-10 max-md:mt-48 max-md:text-2xl  max-md:text-[#27A5EF]   max-md:hover:2xl font-hamlin  group-hover:text-6xl group-hover:text-[#27A5EF] transition-all ease-linear absolute text-5xl  text-black mix-blend-difference"
       >
         {role}
       </motion.h2>
