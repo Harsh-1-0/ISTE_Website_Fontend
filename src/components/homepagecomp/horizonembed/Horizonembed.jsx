@@ -20,7 +20,7 @@ const Horizonembed = () => {
           width={1080}
           height={1080}
           alt="Horizon Cover"
-          className="object-cover w-[80%] h-full"
+          className="object-cover w-[75%] h-[75%]"
         />
       </div>
       <div className="py-[50px] md:py-[60px] hidden md:flex justify-center items-center h-[95%] md:h-fit z-14">

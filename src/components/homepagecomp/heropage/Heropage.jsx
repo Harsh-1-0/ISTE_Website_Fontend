@@ -3,7 +3,7 @@ import Image from "next/image";
 const Heropage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center text-nowrap mt-3 md:mt-0 md:my-3">
+      <div className="flex flex-col justify-center items-center text-nowrap max-w-96 mt-3 md:mt-0 md:my-3">
         <p className="text-[41px] md:text-6xl lg:text-[175px] leading-none py-1 md:py-3">
           INDIAN SOCIETY
         </p>
