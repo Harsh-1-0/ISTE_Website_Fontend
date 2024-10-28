@@ -19,6 +19,8 @@ module.exports = {
   			'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'slide-in-right': 'slideInRight 3s ease-out forwards',
         'slide-in-left': 'slideInLeft 3s ease-out forwards',
+        'rotate-left' : 'rotateLeft 1s ease-in-out forwards',
+        'rotate-right' : 'rotateRight 1s ease-in-out forwards'
   		},
   		keyframes: {
   			'infinite-scroll': {
@@ -37,6 +39,15 @@ module.exports = {
           '0%': { transform: 'translateX(-1%)' },
           '100%': { transform: 'translateX(20%)' },
         },
+        rotateLeft: {
+          '0%' : {transform: 'rotate(0)'},
+          '100%': {transform: 'rotate(-30deg)'},
+        },
+        rotateRight: {
+          '0%' : {transform: 'rotate(0)'},
+          '100%': {transform: 'rotate(30deg)'},
+        },
+
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -4,17 +4,17 @@ const Domainsubsec = () => {
     {
       domainname: "MANAGEMENT",
       imgpath: "/Pictures/gifs/managementgif.mp4",
-      description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
+      description: "Here we focus on coordinating and promoting chapter activities. You'll manage events, lead promotional campaigns, and develop skills in organization, communication, project management, and strategic promotion, expanding the chapter's reach and engagement.",
     },
     {
       domainname:"DESIGN",
       imgpath: "/Pictures/gifs/designgif.mp4",
-      description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
+      description: "Learn to create attractive visuals and engaging social media posts, learning UI/UX design. Whether new or experienced, this opportunity enhances your ability to create effective, attention-grabbing designs.",
     },
     {
       domainname:"TECHNICAL",
       imgpath: "/Pictures/gifs/technicalgif.mp4",
-      description: "Develop astute managerial skills to publicize, promote and manage a world full of wonderful events! Enrapture the audience with your pitching skills and learn what it takes to make an event successful."
+      description: "Gain expertise in web and app development, AI/ML, and competitive programming. You'll create websites, apps, and AI solutions, solving challenges and refining skills to thrive in the evolving digital landscape.",
     }
   ]
   return ( 

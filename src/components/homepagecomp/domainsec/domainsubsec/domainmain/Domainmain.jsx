@@ -11,7 +11,7 @@ const Domainmain = ({ item }) => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <p className="font-hamlin py-2 text-md md:text-lg lg:text-lg">
+      <p className="font-hamlin text-justify py-2 text-md md:text-lg lg:text-lg">
         {item.description}
       </p>
     </div>
