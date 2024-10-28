@@ -6,6 +6,8 @@ import CardSkeleton from "@/components/cardskeleton";
 import Notification from "@/components/notification";
 import { Upload } from "lucide-react";
 import Image from "next/image";
+import dotenv from "dotenv";
+dotenv.config();
 
 export default function Page({ params }) {
   const { regno } = params;
@@ -25,7 +27,7 @@ export default function Page({ params }) {
     const getData = async () => {
       try {
         const result = await axios.get(
-          `https://iste-website-api.vercel.app/advisory/${regno}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory/${regno}`
         );
         console.log(result.data);
         setResponse(result.data);
@@ -40,7 +42,7 @@ export default function Page({ params }) {
     async function checkRole() {
       try {
         const response1 = await axios.get(
-          "https://iste-website-api.vercel.app/admin/dashboard",
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/dashboard`,
           {
             headers: {
               Authorization: `Bearer ${tokenISTE}`,
@@ -119,7 +121,7 @@ export default function Page({ params }) {
 
     try {
       const response = await axios.patch(
-        `https://iste-website-api.vercel.app/advisory/${regno}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory/${regno}`,
         formData,
         {
           headers: {
@@ -158,7 +160,7 @@ export default function Page({ params }) {
     ) {
       try {
         const response = await axios.delete(
-          `https://iste-website-api.vercel.app/advisory/${regno}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory/${regno}`,
           {
             headers: {
               Authorization: `Bearer ${tokenISTE}`,

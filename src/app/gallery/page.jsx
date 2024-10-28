@@ -7,6 +7,8 @@ import Galleryskeleton from "@/components/gallerytabcomp/Galleryskeleton";
 import Gallerycard from "@/components/gallerytabcomp/Gallerycard";
 import { IoCloseOutline } from "react-icons/io5";
 import InfiniteScroll from "react-infinite-scroll-component";
+import dotenv from "dotenv";
+dotenv.config();
 
 const Gallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -35,7 +37,7 @@ const Gallery = () => {
     const getGallery = async () => {
       try {
         const response = await axios.get(
-          "https://iste-website-api.vercel.app/gallery"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/gallery`
         );
         shuffleArray(response.data);
         setGallery(response.data);

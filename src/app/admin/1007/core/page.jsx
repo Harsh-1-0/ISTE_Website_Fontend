@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Card from "@/components/card";
 import CardSkeleton from "@/components/cardskeleton";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
 const Core = () => {
   const [response, setResponse] = useState([]);
@@ -12,7 +14,7 @@ const Core = () => {
     const getData = async () => {
       try {
         const result = await axios.get(
-          "https://iste-website-api.vercel.app/core"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/core`
         );
         console.log(result.data);
 

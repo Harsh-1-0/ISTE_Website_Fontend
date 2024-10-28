@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Card from "@/components/card";
 import CardSkeleton from "@/components/cardskeleton";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 import Nav from "@/components/Nav";
 const Core = () => {
   const [response, setResponse] = useState([]); // Initialize as empty array
@@ -12,9 +14,7 @@ const Core = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await axios.get(
-          "https://iste-website-api.vercel.app/advisory"
-        );
+        const result = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory`);
         console.log(result);
         setResponse(result.data); // Set only the data part of the response
         setFilteredResponse(result.data); // Initialize filtered data with the full response

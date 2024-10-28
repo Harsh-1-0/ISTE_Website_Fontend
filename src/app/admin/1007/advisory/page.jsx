@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Card from "@/components/card";
 import CardSkeleton from "@/components/cardskeleton";
+import dotenv from "dotenv";
+dotenv.config();
 import axios from "axios";
 
 const Advisory = () => {
@@ -12,7 +14,7 @@ const Advisory = () => {
     const getData = async () => {
       try {
         const result = await axios.get(
-          "https://iste-website-api.vercel.app/advisory"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory `
         );
         console.log(result.data);
         setResponse(result.data); // Set only the data part of the response

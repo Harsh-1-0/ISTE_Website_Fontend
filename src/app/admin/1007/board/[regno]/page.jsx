@@ -7,6 +7,8 @@ import CardSkeleton from "@/components/cardskeleton";
 import Notification from "@/components/notification";
 import { Upload } from "lucide-react";
 import Image from "next/image";
+import dotenv from "dotenv";
+dotenv.config();
 
 export default function Page({ params }) {
   const { regno } = params;
@@ -26,7 +28,7 @@ export default function Page({ params }) {
     const getData = async () => {
       try {
         const result = await axios.get(
-          `https://iste-website-api.vercel.app/board/${regno}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/board/${regno}`
         );
         console.log(result.data);
         setResponse(result.data);
@@ -41,7 +43,7 @@ export default function Page({ params }) {
     async function checkRole() {
       try {
         const response1 = await axios.get(
-          "https://iste-website-api.vercel.app/admin/dashboard",
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/dashboard`,
           {
             headers: {
               Authorization: `Bearer ${tokenISTE}`,
@@ -116,7 +118,7 @@ export default function Page({ params }) {
 
     try {
       const response = await axios.patch(
-        `https://iste-website-api.vercel.app/board/${regno}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/board/${regno}`,
         formData,
         {
           headers: {
@@ -153,7 +155,7 @@ export default function Page({ params }) {
     if (window.confirm("Are you sure you want to delete this board member?")) {
       try {
         const response = await axios.delete(
-          `https://iste-website-api.vercel.app/board/${regno}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/board/${regno}`,
           {
             headers: {
               Authorization: `Bearer ${tokenISTE}`,

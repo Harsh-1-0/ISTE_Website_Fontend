@@ -4,6 +4,8 @@ import axios from "axios";
 import { Upload, Camera } from "lucide-react";
 import Notification from "@/components/notification";
 import Image from "next/image";
+import dotenv from "dotenv";
+dotenv.config();
 
 const AddAdvisory = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -63,7 +65,7 @@ const AddAdvisory = () => {
 
     try {
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/advisory",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory`,
         formData,
         {
           headers: {

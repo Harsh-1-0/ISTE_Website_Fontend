@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { auth, provider, signInWithPopup } from "../../../components/firebase";
 import Notification from "@/components/notification";
+import dotenv from "dotenv";
+dotenv.config();
 
 const SignIn = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -18,7 +20,7 @@ const SignIn = () => {
       const idToken1 = await result.user.getIdToken();
       console.log(idToken1);
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/admin/signup",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/signup`,
         {},
         {
           headers: {
@@ -49,7 +51,7 @@ const SignIn = () => {
       const idToken1 = await result.user.getIdToken();
 
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/admin/login",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/login`,
         {},
         {
           headers: {

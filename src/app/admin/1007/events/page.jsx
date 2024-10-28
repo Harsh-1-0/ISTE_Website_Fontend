@@ -5,6 +5,8 @@ import Notification from "@/components/notification";
 import axios from "axios";
 import PastEventsSkele from "@/components/eventstabcomp/PastSkele";
 import { useEffect, useState } from "react";
+import dotenv from "dotenv";
+dotenv.config();
 
 const Events = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -23,7 +25,7 @@ const Events = () => {
     const getEvents = async () => {
       try {
         const response = await axios.get(
-          "https://iste-website-api.vercel.app/event"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/event`
         );
         setEvents(response.data);
         console.log(response.data);
@@ -42,7 +44,7 @@ const Events = () => {
     try {
       console.log(title);
       const response = await axios.delete(
-        `https://iste-website-api.vercel.app/event/${title}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/event/${title}`,
         {
           headers: {
             Authorization: `Bearer ${tokenISTE}`,

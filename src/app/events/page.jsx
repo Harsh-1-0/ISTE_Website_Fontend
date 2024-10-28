@@ -7,7 +7,8 @@ import Eventsheader from "@/components/eventstabcomp/eventsheader/Eventsheader";
 import Tfvcard from "@/components/eventstabcomp/tfvcard/Tfvcard";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import dotenv from "dotenv";
+dotenv.config();
 const Events = () => {
   const [upcoming, setUpcoming] = useState([]);
   const [events, setEvents] = useState([]);
@@ -17,7 +18,7 @@ const Events = () => {
     const getUpcoming = async () => {
       try {
         const response = await axios.get(
-          "https://iste-website-api.vercel.app/upcoming"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/upcoming`
         );
         setUpcoming(response.data);
       } catch (err) {
@@ -30,7 +31,7 @@ const Events = () => {
     const getEvents = async () => {
       try {
         const response = await axios.get(
-          "https://iste-website-api.vercel.app/event"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/event`
         );
         setEvents(response.data);
       } catch (err) {

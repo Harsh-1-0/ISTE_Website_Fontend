@@ -4,6 +4,8 @@ import Card from "@/components/card";
 import CardSkeleton from "@/components/cardskeleton";
 import axios from "axios";
 import Nav from "@/components/Nav";
+import dotenv from "dotenv";
+dotenv.config();
 const Core = () => {
   const [response, setResponse] = useState([]); // Initialize as empty array
   const [filteredResponse, setFilteredResponse] = useState([]); // For filtered data
@@ -13,7 +15,7 @@ const Core = () => {
     const getData = async () => {
       try {
         const result = await axios.get(
-          "https://iste-website-api.vercel.app/board"
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/board`
         );
         console.log(result);
         setResponse(result.data); // Set only the data part of the response

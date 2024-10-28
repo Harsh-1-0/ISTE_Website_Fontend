@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "@/components/Loading";
-
+import dotenv from "dotenv";
+dotenv.config();
 const Dashboard = () => {
   const [response, setResponse] = useState({});
   const [role, setRole] = useState("");
@@ -23,7 +24,7 @@ const Dashboard = () => {
     const getData = async () => {
       try {
         const response1 = await axios.get(
-          "https://iste-website-api.vercel.app/admin/dashboard",
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin/dashboard`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

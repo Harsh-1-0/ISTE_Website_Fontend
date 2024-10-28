@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { Upload } from "lucide-react";
 import Notification from "@/components/notification";
+import dotenv from "dotenv";
+dotenv.config();
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB in bytes
 const ALLOWED_FILE_TYPES = ["image/webp"];
@@ -115,7 +117,7 @@ function Upcoming() {
 
     try {
       const response = await axios.put(
-        "https://iste-website-api.vercel.app/upcoming",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/upcoming`,
         formDataToSend,
         {
           headers: {

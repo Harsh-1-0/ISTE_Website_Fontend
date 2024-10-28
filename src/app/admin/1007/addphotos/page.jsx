@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Notification from "@/components/notification";
+import dotenv from "dotenv";
+dotenv.config();
 export default function AddImages() {
   const [image, setImage] = useState(null);
   const [showNotification, setShowNotification] = useState(false);
@@ -33,7 +35,7 @@ export default function AddImages() {
     console.log("hello");
     try {
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/gallery",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/gallery`,
         formData,
         {
           headers: {

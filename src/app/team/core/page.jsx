@@ -5,7 +5,8 @@ import CardSkeleton from "@/components/cardskeleton";
 import axios from "axios";
 import Nav from "@/components/Nav";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import dotenv from "dotenv";
+dotenv.config();
 const Core = () => {
   const [response, setResponse] = useState([]);
   const [filteredResponse, setFilteredResponse] = useState([]);

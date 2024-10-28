@@ -4,6 +4,8 @@ import axios from "axios";
 import { Upload, Camera } from "lucide-react";
 import Notification from "@/components/notification";
 import Image from "next/image";
+import dotenv from "dotenv";
+dotenv.config();
 const AddBoard = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
@@ -61,7 +63,7 @@ const AddBoard = () => {
 
     try {
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/board",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/board`,
         formData,
         {
           headers: {

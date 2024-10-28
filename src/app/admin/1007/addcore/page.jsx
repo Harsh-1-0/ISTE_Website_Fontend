@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { Upload } from "lucide-react";
 import Image from "next/image";
+import dotenv from "dotenv";
+dotenv.config();
 
 const AddCore = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -61,7 +63,7 @@ const AddCore = () => {
 
     try {
       const response = await axios.post(
-        "https://iste-website-api.vercel.app/core",
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/core`,
         formData,
         {
           headers: {

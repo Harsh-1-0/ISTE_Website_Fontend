@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import UserCard from "@/components/admincard";
 import Notification from "@/components/notification";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 function Superadmin() {
   const [response, setResponse] = useState({});
   const [showNotification, setShowNotification] = useState(false);
@@ -17,7 +19,7 @@ function Superadmin() {
     const getData = async () => {
       try {
         const response1 = await axios.get(
-          "https://iste-website-api.vercel.app/superAdmin",
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/superAdmin`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -38,7 +40,7 @@ function Superadmin() {
     try {
       const token = localStorage.getItem("tokenISTE");
       const response = await axios.patch(
-        `https://iste-website-api.vercel.app/superAdmin/${email}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/superAdmin/${email}`,
         { role },
         {
           headers: {
@@ -67,7 +69,7 @@ function Superadmin() {
     try {
       const token = localStorage.getItem("tokenISTE");
       const response = await axios.delete(
-        `https://iste-website-api.vercel.app/superAdmin/${email}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/superAdmin/${email}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
