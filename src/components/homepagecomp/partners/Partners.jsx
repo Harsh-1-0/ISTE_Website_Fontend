@@ -97,7 +97,7 @@ const Partners = () => {
           <Partnerin srcval={link} key={link.title} />
         ))}
       </div>
-      <div className="flex md:hidden my-10 md:my-0">
+      <div className="flex ml-28 md:ml-0 md:hidden my-10 md:my-0">
         <Carousel
           opts={{
             align: "center",

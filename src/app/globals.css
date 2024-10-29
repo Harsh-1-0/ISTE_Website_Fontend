@@ -6,8 +6,13 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('/Pictures/cursor/cursor.svg')20 20,auto;
+  cursor: url('/Pictures/cursor/cursor.png')0 0,auto;
 }
+
+a, button, .custom-pointer:hover {
+  cursor: url('/Pictures/cursor/pointer.png')0 0, pointer;
+}
+
 
 @font-face {
   font-family: 'Hamlin';

@@ -6,7 +6,7 @@ const Galleryheader = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-nowrap md:my-1">
-        <p className="text-[41px] md:text-6xl lg:text-[198px] leading-none py-1 md:py-2">
+        <p className="text-[47px] md:text-6xl lg:text-[198px] leading-none py-1 md:py-2">
           BEHIND THE SCENES
         </p>
       </div>
@@ -47,7 +47,7 @@ const Galleryheader = () => {
             alt="prop"
             width={100}
             height={100}
-            className="w-[38px] h-[38px] md:w-24 md:h-24 lg:w-[72px] lg:h-[72px] lg:min-w-30 lg:min-w-30"
+            className="w-[32px] h-[32px] md:w-24 md:h-24 lg:w-[72px] lg:h-[72px] lg:min-w-30 lg:min-w-30"
           />
         </div>
       </div>

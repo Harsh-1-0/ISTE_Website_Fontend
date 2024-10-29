@@ -65,15 +65,15 @@ const Webinarmain = () => {
                         height={1080}
                         alt="webinar"
                         width={1080}
-                        className="w-fit h-fit mt-9 md:mt-36 md:w-[1080px] md:h-[600px] border-[10px] border-black"
+                        className="w-fit h-fit mt-9 md:mt-36 md:w-[1080px] md:h-[600px] border-4 md:border-[10px] border-black"
                       />
                     </div>
                   </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-5 top-1/2 transform -translate-y-1/2  text-black rounded-full p-5 shadow-lg  transition"/>
-            <CarouselNext className="absolute right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-5 shadow-lg transition"/>
+            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2  text-black rounded-full p-3 shadow-lg  transition"/>
+            <CarouselNext className="absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition"/>
           </Carousel>
         </div>
       </div>
