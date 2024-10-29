@@ -1,6 +1,8 @@
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const Heropage = () => {
+  const text = "WELCOME TO".split(" ");
+  const textHov = "OUR INTERNET".split(" ");
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-nowrap max-w-96 mt-3 md:mt-0 md:my-3">
@@ -16,9 +18,33 @@ const Heropage = () => {
       </div>
       <div className="py-[4px] md:py-[6px] border-t-4 md:border-t-8 border-b-4 md:border-b-8 border-black w-11/12 flex justify-between items-center text-[20px] md:text-4xl lg:text-[58px] my-2 text-nowrap">
         <div>
-          WELCOME TO{" "}
-          <span className="hover:text-[#27A5EF] transition-all duration-150 ease-in-out">
-            OUR INTERNET
+          {text.map((el, i) => (
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.25,
+                delay: i / 10,
+              }}
+              key={i}
+            >
+              {el}{" "}
+            </motion.span>
+          ))}
+          <span className="hover:text-[#27A5EF] transition-all duration-500 ease-in-out">
+            {textHov.map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.25,
+                  delay: (text.length + i) / 10,
+                }}
+                key={i}
+              >
+                {el}{" "}
+              </motion.span>
+            ))}
           </span>
         </div>
         <div>

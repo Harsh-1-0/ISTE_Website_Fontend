@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <div className="w-full  h-[100vh] overflow-hidden max-md:overflow-y-hidden">
+        <div className="w-full  h-[100vh] overflow-hidden ">
           <video
             src="https://res.cloudinary.com/dleuqns7p/video/upload/v1730132894/bcrblys3eyghknccc1il.mp4"
             autoPlay
