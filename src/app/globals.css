@@ -56,6 +56,22 @@ a, button, .custom-pointer:hover {
   }
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #27A5EF;
+  border-radius: 4px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: white;
+}
 /* *{
   outline: 1px solid red;
 } */
