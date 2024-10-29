@@ -46,7 +46,7 @@ const PastEventsCard = ({
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Image Container */}
-          <div className="relative w-full grayscale group-hover:grayscale-0 border-b-2 border-black aspect-[3/1] overflow-hidden">
+          <div className="relative w-full grayscale group-hover:grayscale-0 border-b-2 border-black aspect-[2/1] overflow-hidden">
             <Image
               src={image}
               alt={title}

@@ -134,7 +134,7 @@ const Events = () => {
         </div>
         <div>
           <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Gravitas
+            GRAVITAS
           </h1>
           {gravitas ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
@@ -156,7 +156,7 @@ const Events = () => {
         </div>
         <div>
           <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Rivera
+            RIVIERA
           </h1>
           {rivera ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
@@ -178,7 +178,7 @@ const Events = () => {
         </div>
         <div>
           <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Horizon
+            HORIZON
           </h1>
           {horizon ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
