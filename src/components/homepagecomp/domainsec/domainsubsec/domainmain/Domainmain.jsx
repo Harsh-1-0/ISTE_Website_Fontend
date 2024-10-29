@@ -1,19 +1,71 @@
-import Image from "next/image";
+import React from "react";
+
 const Domainmain = ({ item }) => {
   return (
-    <div className="flex flex-col lg:items-none lg:justify-start border-black border-[3px] md:border-[6px] p-6 lg:p-3 lg:px-4` mx-6 lg:mx-4 my-8 lg:my-0">
-      <div className="text-4xl md:text-5xl lg:text-5xl py-1">
-        {item.domainname}
+    <div className="group relative transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div
+        className="flex flex-col lg:items-none lg:justify-start border-black border-[3px] md:border-[6px] p-6 lg:p-3 lg:px-4 mx-6 lg:mx-4 my-8 lg:my-0 
+        transition-all duration-300 
+        group-hover:border-[#27A5EF]
+        bg-white 
+        group-hover:bg-gray-50"
+      >
+        {/* Domain Name with sliding animation */}
+        <div className="relative overflow-hidden">
+          <div
+            className="text-4xl md:text-5xl lg:text-5xl py-1 
+            transform transition-all duration-300 
+            group-hover:text-[#27A5EF] 
+            group-hover:translate-x-4
+            group-hover:scale-105"
+          >
+            {item.domainname}
+          </div>
+        </div>
+
+        {/* Video Container with animation */}
+        <div
+          className="w-[275px] h-[275px] overflow-hidden 
+          transform transition-all duration-300 
+          group-hover:scale-105"
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            preload="none"
+            className="w-full h-full object-cover 
+              transition-all duration-300 
+              group-hover:saturate-150"
+          >
+            <source src={item.imgpath} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* Description with staggered sliding animation */}
+        <div className="relative ">
+          <p
+            className="font-hamlin text-justify py-2 text-md md:text-lg lg:text-lg
+            transform transition-all duration-300 
+            group-hover:translate-x-2
+            group-hover:text-gray-800
+            delay-75"
+          >
+            {item.description}
+          </p>
+        </div>
+
+        {/* Animated pseudo-element for additional effect */}
+        <div
+          className="absolute inset-0 -z-10 
+          bg-gradient-to-r from-blue-100 to-[#27A5EF] 
+          opacity-0 transition-opacity duration-300 
+          group-hover:opacity-100 
+          rounded-lg 
+          blur-3xl"
+        />
       </div>
-      <div className="w-[275px] h-[275px]">
-        <video autoPlay loop muted preload="none">
-          <source src={item.imgpath} type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <p className="font-hamlin text-justify py-2 text-md md:text-lg lg:text-lg">
-        {item.description}
-      </p>
     </div>
   );
 };
