@@ -11,7 +11,7 @@ const Gallerycard = ({ gallery, getImg }) => {
         >
           <Image
             src={item.image}
-            alt={item.id}
+            alt={item.id || "gallery image"}
             layout="responsive"
             width={500}
             height={300}
