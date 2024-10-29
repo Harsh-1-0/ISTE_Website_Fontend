@@ -6,7 +6,7 @@ const Partnerin = ({ srcval }) => {
 
   return (
     <div
-      className="relative border-black border-4 py-20 md:p-10 
+      className="relative w-[75%] md:w-full border-black border-4 py-2 md:p-10 
                  flex items-center justify-center 
                  transition-all duration-500 ease-in-out
                  animate-fadeIn

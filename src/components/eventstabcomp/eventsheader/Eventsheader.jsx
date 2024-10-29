@@ -3,11 +3,11 @@ const Eventsheader = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-nowrap my-1">
-        <p className="text-[46px] md:text-6xl lg:text-[208px] py-1 md:py-2">
+        <p className="text-[49px] md:text-6xl lg:text-[207px] leading-none md:py-2">
           READ ALL ABOUT IT
         </p>
       </div>
-      <div className="border-t-4 md:border-t-8 border-b-4 md:border-b-8 border-black w-11/12 py-2 flex justify-between items-center text-[24px] md:text-4xl lg:text-7xl my-1 md:my-3 text-nowrap">
+      <div className="py-[4px] md:py-[6px] border-t-4 md:border-t-8 border-b-4 md:border-b-8 border-black w-11/12 flex justify-between items-center text-[24px] md:text-4xl lg:text-[58px] my-2 text-nowrap">
         <div>
           EXPERIENCE THE{" "}
           <span className="hover:text-[#27A5EF] transition-all duration-150 ease-in-out">
@@ -20,7 +20,7 @@ const Eventsheader = () => {
             alt="prop"
             width={100}
             height={100}
-            className="w-10 h-10 md:w-24 md:h-24 lg:w-32 lg:h-32 lg:min-w-30 lg:min-w-30"
+            className="w-[38px] h-[38px] md:w-24 md:h-24 lg:w-[72px] lg:h-[72px] lg:min-w-30 lg:min-w-30"
           />
         </div>
       </div>

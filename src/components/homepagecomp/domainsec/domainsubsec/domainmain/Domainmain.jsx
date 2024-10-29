@@ -7,8 +7,7 @@ const Domainmain = ({ item }) => {
         className="flex flex-col lg:items-none lg:justify-start border-black border-[3px] md:border-[6px] p-6 lg:p-3 lg:px-4 mx-6 lg:mx-4 my-8 lg:my-0 
         transition-all duration-300 
         group-hover:border-[#27A5EF]
-        bg-white 
-        group-hover:bg-gray-50"
+        bg-white"
       >
         {/* Domain Name with sliding animation */}
         <div className="relative overflow-hidden">
@@ -35,8 +34,7 @@ const Domainmain = ({ item }) => {
             muted
             preload="none"
             className="w-full h-full object-cover 
-              transition-all duration-300 
-              group-hover:saturate-150"
+              transition-all duration-300"
           >
             <source src={item.imgpath} type="video/mp4" />
             Your browser does not support the video tag.
@@ -48,8 +46,7 @@ const Domainmain = ({ item }) => {
           <p
             className="font-hamlin text-justify py-2 text-md md:text-lg lg:text-lg
             transform transition-all duration-300 
-            group-hover:translate-x-2
-            group-hover:text-gray-800
+            group-hover:translate-x-1
             delay-75"
           >
             {item.description}

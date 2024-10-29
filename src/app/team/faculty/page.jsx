@@ -21,7 +21,7 @@ function Faculty() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-evenly items-center my-10 gap-10">
+      <div className="flex flex-col md:flex-row justify-evenly items-center my-2 md:my-10 gap-10">
         <div
           className="group w-full cursor-pointer max-w-xl max-md:max-w-xs bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
                         transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
