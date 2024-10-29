@@ -87,7 +87,7 @@ const Footer = () => {
           Made with{" "}
           <span className="px-3">
             <Image
-              src="/Pictures/heartiste.png "
+              src="https://res.cloudinary.com/dleuqns7p/image/upload/v1730130545/iyp3bwhmeogekcncsnk4.png"
               alt="ISTE FOOTER"
               width={25}
               height={25}

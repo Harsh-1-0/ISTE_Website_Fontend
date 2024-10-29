@@ -53,13 +53,13 @@ export default function NotFound() {
   return (
     <div className="mt-24 md:mt-28 flex flex-col justify-center items-center">
       <div className="flex flex-col mb-4 gap-5 align-middle items-center">
-        <h1 className="font-anton text-7xl max-md:text-6xl">
+        <h1 className="font-anton text-7xl max-md:text-4xl">
           404: PAGE NOT FOUND
         </h1>
         <div className="text-4xl text-gray-600 font-anton text-center">
           The thing which you are searching for is not here but...
           {!hasInteracted ? (
-            <div className="text-2xl mt-2 text-blue-500">
+            <div className="text-2xl max-md:text-xl mt-2 text-blue-500">
               (Interact with the page to hear a tune)
             </div>
           ) : (

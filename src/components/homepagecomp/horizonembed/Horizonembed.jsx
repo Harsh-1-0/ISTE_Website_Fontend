@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ const Horizonembed = () => {
       </div>
       <div className="py-[50px] md:py-[60px] hidden md:flex justify-center items-center h-[95%] md:h-fit z-14">
         <iframe
-          src="http://Horizon.istevit.in"
+          src="https://Horizon.istevit.in"
           width="80%"
           height="720px"
           className="border-[4px] border-white p-10 rounded-lg shadow-lg shadow-white hover:shadow-gray-600 hover:border-gray-600 transition-all duration-150"

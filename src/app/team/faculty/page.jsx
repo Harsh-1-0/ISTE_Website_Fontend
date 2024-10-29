@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 function Faculty() {
   return (
     <div className="flex flex-col">
-      <div className="my-3 p-4 max-sm:text-lg   max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg px-3">
+      <div className="my-3 p-4 max-sm:text-lg px-16  max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
         <div className="font-hamlin flex gap-5 max-md:gap-3  text-center">
           <div className="hover:underline duration-500">
             <a href="/team/faculty"> Coordinator</a>
@@ -23,7 +23,7 @@ function Faculty() {
       </div>
       <div className="flex flex-col md:flex-row justify-evenly items-center my-10 gap-10">
         <div
-          className="group w-full cursor-pointer max-w-xl max-md:max-w-sm bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
+          className="group w-full cursor-pointer max-w-xl max-md:max-w-xs bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
                         transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
         >
           {/* Image Container with Animation */}
@@ -83,7 +83,7 @@ function Faculty() {
         </div>
 
         <div
-          className="group w-full cursor-pointer max-w-xl max-md:max-w-sm  bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
+          className="group w-full cursor-pointer max-w-xl max-md:max-w-xs  bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
                         transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
         >
           <div
