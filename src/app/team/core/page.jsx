@@ -111,7 +111,7 @@ const Core = () => {
             </p>
           }
         >
-          <div className="flex flex-wrap gap-8  items-center max-lg:justify-center justify-between px-16">
+          <div className="flex flex-wrap gap-8  items-center max-lg:justify-center justify-between ">
             {filteredResponse.map((item) => (
               <Card
                 key={item._id}

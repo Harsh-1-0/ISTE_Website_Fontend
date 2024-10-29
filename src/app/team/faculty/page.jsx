@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 function Faculty() {
   return (
     <div className="flex flex-col">
-      <div className="my-3 p-4 max-sm:text-lg px-16  max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
+      <div className="my-3 p-4 max-sm:text-lg px-16 max-md:px-4  max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
         <div className="font-hamlin flex gap-5 max-md:gap-3  text-center">
           <div className="hover:underline duration-500">
             <a href="/team/faculty"> Coordinator</a>
