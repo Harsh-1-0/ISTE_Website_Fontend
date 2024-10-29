@@ -14,7 +14,9 @@ const Core = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory`);
+        const result = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/advisory`
+        );
         console.log(result);
         setResponse(result.data); // Set only the data part of the response
         setFilteredResponse(result.data); // Initialize filtered data with the full response
@@ -46,7 +48,7 @@ const Core = () => {
   return (
     <div>
       {!loading && <Nav handleSearch={handleSearch} active={"advisory"} />}
-      <div className="flex flex-wrap gap-5  items-center max-lg:justify-center justify-between p-5">
+      <div className="flex flex-wrap gap-5  items-center max-lg:justify-center justify-evenly p-5">
         {loading ? (
           <CardSkeleton cards={15} />
         ) : (

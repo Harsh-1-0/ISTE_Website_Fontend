@@ -82,7 +82,7 @@ const Core = () => {
     <div className="p-4">
       {!loading && <Nav handleSearch={handleSearch} active={"core"} />}
       {loading ? (
-        <div className="flex flex-wrap gap-2 items-center max-lg:justify-center justify-between ">
+        <div className="flex flex-wrap gap-2 items-center max-lg:justify-center justify-evenly ">
           <CardSkeleton cards={12} />
         </div>
       ) : (
@@ -111,7 +111,7 @@ const Core = () => {
             </p>
           }
         >
-          <div className="flex flex-wrap gap-8  items-center max-lg:justify-center justify-between ">
+          <div className="flex flex-wrap gap-8  items-center max-lg:justify-center justify-evenly ">
             {filteredResponse.map((item) => (
               <Card
                 key={item._id}
