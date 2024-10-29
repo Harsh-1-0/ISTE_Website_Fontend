@@ -14,25 +14,29 @@ const DevsData = [
     name: "HARSH KUMAR SINHA",
     role: "Developer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964323/omvamc3841hskzen6j78.png",
+    linkdin: "https://www.linkedin.com/in/harsh-kumar-sinha-604929216/",
   },
   {
     name: "GAGAN N BANGARAGIRI",
     role: "Designer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
+    linkdin: "https://www.linkedin.com/in/gagan-n-bangaragiri/",
   },
   {
     name: "SHANKAR BS",
     role: "Developer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
+    linkdin: "https://www.linkedin.com/in/shankar-bs/",
   },
   {
     name: "ARADHYE SWARUP",
     role: "Designer",
     img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/hvrssvhkrs2pufz72nxf.png",
+    linkdin: "https://www.linkedin.com/in/aradhyeswarup/",
   },
 ];
 
-function ImageSection({ src, name, role }) {
+function ImageSection({ src, name, role, linkdin }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -48,12 +52,14 @@ function ImageSection({ src, name, role }) {
           boxShadow: "0px 20px 20px 0px rgba(0,0,0,0.2)",
         }}
       >
-        <NextImage
-          fill
-          src={src}
-          alt="Devs Images"
-          className="w-full border-x-8 border-black grayscale group-hover:grayscale-0 h-full object-cover"
-        />
+        <a href={linkdin} className="" target="_blank">
+          <NextImage
+            fill
+            src={src}
+            alt="Devs Images"
+            className="w-full border-x-8 border-black grayscale group-hover:grayscale-0 h-full object-cover"
+          />
+        </a>
       </motion.div>
 
       <motion.h2
@@ -128,6 +134,7 @@ const ParallaxGallery = () => {
               src={dev.img}
               role={dev.role}
               name={dev.name}
+              linkdin={dev.linkdin}
             />
           ))}
         </div>
