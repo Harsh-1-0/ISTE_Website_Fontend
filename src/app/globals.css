@@ -7,6 +7,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   cursor: url('/Pictures/cursor/cursor.png')0 0,auto;
+  scroll-behavior: smooth;
 }
 
 a, button, .custom-pointer:hover {
@@ -57,7 +58,7 @@ a, button, .custom-pointer:hover {
 }
 
 ::-webkit-scrollbar{
-  width: 8px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track{
   background-color: black;
@@ -65,13 +66,10 @@ a, button, .custom-pointer:hover {
 
 ::-webkit-scrollbar-thumb{
   background-color: #27A5EF;
-  border-radius: 4px;
-  height: 200px;
+  border-radius: 8px;
+  height: 100px;
 }
 
-::-webkit-scrollbar-thumb:hover{
-  background-color: white;
-}
 /* *{
   outline: 1px solid red;
 } */

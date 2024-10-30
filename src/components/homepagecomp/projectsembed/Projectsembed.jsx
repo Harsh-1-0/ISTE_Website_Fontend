@@ -3,7 +3,7 @@ import Projectbg from "./projectbg/projectbg";
 
 const Projectsembed = () => {
   return (
-    <div className="bg-black grayscale hover:grayscale-0 transition-all duration-150 relative flex justify-center items-center min-h-fit overflow-y-hidden py-[70px]">
+    <div className="bg-black grayscale hover:grayscale-0 transition-all duration-150 relative flex justify-center items-center min-h-fit overflow-y-hidden py-[70px] group">
       <div className="absolute z-10 w-full">
         {Array.from({ length: 3 }).map((_, index) => (
           <Projectbg key={index} />
