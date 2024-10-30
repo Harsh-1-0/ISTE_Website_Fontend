@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <div className="w-full  h-[100vh] overflow-hidden ">
+        <div className="w-full  h-[100vh]">
           {executed && (
             <video
               src={
@@ -46,7 +46,8 @@ export default function Home() {
               }
               autoPlay
               muted
-              className="object-contain grayscale hover:grayscale-0 transition-all duration-500"
+              playsInline
+              className="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 overflow-y-hidden"
             />
           )}
         </div>

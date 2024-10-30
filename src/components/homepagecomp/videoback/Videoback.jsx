@@ -8,6 +8,7 @@ const Videoback = ({ srcval }) => {
         loop
         muted
         playsinline
+        controls={false}
         class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
         style={{ pointerEvents: "none" }}
       ></video>

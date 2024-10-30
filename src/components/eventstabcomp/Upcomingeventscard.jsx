@@ -19,7 +19,7 @@ const Upcomingeventscard = ({
             alt="eventimg"
             width={1080}
             height={1080}
-            className="w-[360px] h-[120px] md:w-[930px] md:h-[300px] object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 

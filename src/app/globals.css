@@ -10,6 +10,11 @@ body{
   scroll-behavior: smooth;
 }
 
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 a, button, .custom-pointer:hover {
   cursor: url('/Pictures/cursor/pointer.png')0 0, pointer;
 }

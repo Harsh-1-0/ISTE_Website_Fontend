@@ -103,6 +103,7 @@ const Webinarmain = () => {
           loop
           muted
           playsinline
+          controls={false}
           style={{ pointerEvents: "none" }}
           className="w-full h-full object-cover"
         ></video>
