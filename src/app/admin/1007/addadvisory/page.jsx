@@ -176,7 +176,6 @@ const AddAdvisory = () => {
             </label>
             <input
               autoComplete="off"
-              required
               type="text"
               name="companyplaced"
               value={Data.companyplaced}
