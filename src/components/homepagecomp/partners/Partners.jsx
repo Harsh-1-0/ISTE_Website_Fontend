@@ -93,7 +93,7 @@ const Partners = () => {
         PARTNERS
         <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
       </div>
-      <div className="hidden md:grid md:grid-cols-4 md:gap-4 my-8">
+      <div className="hidden  md:grid md:grid-cols-4  md:gap-4 my-8">
         {partnersroll.map((link) => (
           <Partnerin srcval={link} key={link.title} />
         ))}

@@ -13,6 +13,9 @@ body{
 a, button, .custom-pointer:hover {
   cursor: url('/Pictures/cursor/pointer.png')0 0, pointer;
 }
+html{
+  scroll-behavior: auto;
+}
 
 
 @font-face {

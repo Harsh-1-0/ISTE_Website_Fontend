@@ -34,27 +34,27 @@ function Nav({ handleSearch, active }) {
   }, []);
 
   return (
-    <div className="flex justify-between my-3 p-4 px-12   max-sm:text-2xl   max-md:text-xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
+    <div className="flex justify-between my-3 p-4 px-16   max-sm:text-2xl   max-md:text-xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
       <div className="flex gap-5 max-md:gap-3  max-md:text-lg font-hamlin text-center">
-        <div className="hover:text-[#27A5EF] duration-500">
+        <div className="hover:text-[#27A5EF] hover:underline  duration-500">
           <a href="/team/faculty" className={isActive[0] && "underline  "}>
             {" "}
             Coordinator
           </a>
         </div>
-        <div className="hover:text-[#27A5EF]  duration-500">
+        <div className="hover:text-[#27A5EF] hover:underline   duration-500">
           <a href="/team/advisory" className={isActive[1] && "underline  "}>
             {" "}
             Advisory
           </a>
         </div>
-        <div className="hover:text-[#27A5EF] duration-500">
+        <div className="hover:text-[#27A5EF] hover:underline  duration-500">
           <a href="/team/board" className={isActive[2] && "underline "}>
             {" "}
             Board
           </a>
         </div>
-        <div className="hover:text-[#27A5EF] duration-500">
+        <div className="hover:text-[#27A5EF] hover:underline  duration-500">
           <a href="/team/core" className={isActive[3] && "underline "}>
             {" "}
             Core

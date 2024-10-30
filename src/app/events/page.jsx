@@ -87,10 +87,10 @@ const Events = () => {
       }
     };
     getUpcoming();
-    getEvents();
+    getHorizon();
     getGravitas();
     getRivera();
-    getHorizon();
+    getEvents();
   }, []);
 
   return (
@@ -98,21 +98,22 @@ const Events = () => {
       <Navbar />
       <div className="mt-20 md:mt-24 flex flex-col relative">
         <Eventsheader />
-        <div className="relative  w-full h-full my-2 max-md:my-20">
-          <video
-            src={
-              executed &&
-              (isMobile
-                ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730270618/uqyvjxkxycehuv6x24ib.mp4"
-                : "/Pictures/eventsvid/upcomingbg.mp4")
-            }
-            autoPlay
-            loop
-            playsInline
-            style={{ pointerEvents: "none" }}
-            muted
-            className="w-full h-full object-cover z-10"
-          ></video>
+        <div className="relative   w-full h-full my-16 max-md:my-20">
+          {executed && (
+            <video
+              src={
+                isMobile
+                  ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730270618/uqyvjxkxycehuv6x24ib.mp4"
+                  : "/Pictures/eventsvid/upcomingbg.mp4"
+              }
+              autoPlay
+              loop
+              playsInline
+              style={{ pointerEvents: "none" }}
+              muted
+              className="w-full h-full object-cover z-10"
+            ></video>
+          )}
           {upcoming.length > 0 && (
             <div className="absolute inset-0 flex items-center justify-center z-20">
               {upcoming ? (
@@ -133,82 +134,83 @@ const Events = () => {
         </div>
 
         <div>
-          <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+          <div>
+            <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+              HORIZON
+              <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+            </div>
+            {horizon ? (
+              <div className="flex flex-wrap p-8 justify-between z-30">
+                {horizon.map((event, index) => (
+                  <Pasteventscard
+                    key={index}
+                    title={event.title}
+                    image={event.image}
+                    speaker={event.speaker}
+                    venue={event.venue}
+                    description={event.description}
+                    galleryImages={event.eventImages}
+                  />
+                ))}
+              </div>
+            ) : (
+              <PastEventsSkele cards={3} />
+            )}
+          </div>
+
+          <div>
+            <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+              GRAVITAS
+              <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+            </div>
+            {gravitas ? (
+              <div className="flex flex-wrap p-8 justify-between z-30">
+                {gravitas.map((event, index) => (
+                  <Pasteventscard
+                    key={index}
+                    title={event.title}
+                    image={event.image}
+                    speaker={event.speaker}
+                    venue={event.venue}
+                    description={event.description}
+                    galleryImages={event.eventImages}
+                  />
+                ))}
+              </div>
+            ) : (
+              <PastEventsSkele cards={3} />
+            )}
+          </div>
+          <div>
+            <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+              RIVIERA
+              <hr className="h-1 w-[50%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+            </div>
+            {rivera ? (
+              <div className="flex flex-wrap p-8 justify-between z-30">
+                {rivera.map((event, index) => (
+                  <Pasteventscard
+                    key={index}
+                    title={event.title}
+                    image={event.image}
+                    speaker={event.speaker}
+                    venue={event.venue}
+                    description={event.description}
+                    galleryImages={event.eventImages}
+                  />
+                ))}
+              </div>
+            ) : (
+              <PastEventsSkele cards={3} />
+            )}
+          </div>
+          <div className="text-6xl md:text-8xl  lg:text-9xl font-bold  flex flex-col items-center group w-full hover:text-[#27A5EF]">
             OUR EVENTS
             <hr className="h-1 w-[70%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
           </div>
           {events ? (
-            <div className="flex flex-wrap p-8 justify-between z-30">
+            <div className="flex flex-wrap  justify-between z-30">
               {events.map((event, index) => (
-                <Pasteventscard
-                  key={index}
-                  title={event.title}
-                  image={event.image}
-                  speaker={event.speaker}
-                  venue={event.venue}
-                  description={event.description}
-                  galleryImages={event.eventImages}
-                />
-              ))}
-            </div>
-          ) : (
-            <PastEventsSkele cards={3} />
-          )}
-        </div>
-        <div>
-          <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
-            GRAVITAS
-            <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
-          </div>
-          {gravitas ? (
-            <div className="flex flex-wrap p-8 justify-between z-30">
-              {gravitas.map((event, index) => (
-                <Pasteventscard
-                  key={index}
-                  title={event.title}
-                  image={event.image}
-                  speaker={event.speaker}
-                  venue={event.venue}
-                  description={event.description}
-                  galleryImages={event.eventImages}
-                />
-              ))}
-            </div>
-          ) : (
-            <PastEventsSkele cards={3} />
-          )}
-        </div>
-        <div>
-          <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
-            RIVIERA
-            <hr className="h-1 w-[50%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
-          </div>
-          {rivera ? (
-            <div className="flex flex-wrap p-8 justify-between z-30">
-              {rivera.map((event, index) => (
-                <Pasteventscard
-                  key={index}
-                  title={event.title}
-                  image={event.image}
-                  speaker={event.speaker}
-                  venue={event.venue}
-                  description={event.description}
-                  galleryImages={event.eventImages}
-                />
-              ))}
-            </div>
-          ) : (
-            <PastEventsSkele cards={3} />
-          )}
-        </div>
-        <div>
-          <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
-            HORIZON
-            <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
-          </div>
-          {horizon ? (
-            <div className="flex flex-wrap p-8 justify-between z-30">
-              {horizon.map((event, index) => (
                 <Pasteventscard
                   key={index}
                   title={event.title}

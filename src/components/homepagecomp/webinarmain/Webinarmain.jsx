@@ -36,6 +36,21 @@ const Webinarmain = () => {
       path: "https://www.youtube.com/watch?app=desktop&v=i21ByWUoXDQ",
       imgpath: "/Pictures/webinarthumbnails/casa.png",
     },
+    {
+      title: "Delve Into Github Fundamentals",
+      path: "https://www.youtube.com/watch?v=qVSRpNegp3I",
+      imgpath: "/Pictures/webinarthumbnails/GITHUB.png",
+    },
+    {
+      title: "Sustainable & Corporate India",
+      path: "https://www.youtube.com/watch?v=wyVmRqEkEq8&pp=ygUMaXN0ZSB2aXQgc2Rn",
+      imgpath: "/Pictures/webinarthumbnails/SDG2.png",
+    },
+    {
+      title: "TaskFlow With GCP",
+      path: "https://www.youtube.com/live/-M-cwRXmAnw?feature=shared",
+      imgpath: "/Pictures/webinarthumbnails/GCP.png",
+    },
   ];
   return (
     <div
@@ -57,9 +72,13 @@ const Webinarmain = () => {
           >
             <CarouselContent>
               {webinarcontent.map((item, index) => (
-                <CarouselItem key={index} className="md:pl-44">
-                  <Link href={item.path}>
-                    <div className="mx-10" key={item.title}>
+                <CarouselItem key={index} className="">
+                  <Link
+                    href={item.path}
+                    target="_blank"
+                    className="flex justify-center"
+                  >
+                    <div className="mx-10 ju" key={item.title}>
                       <Image
                         src={item.imgpath}
                         height={1080}

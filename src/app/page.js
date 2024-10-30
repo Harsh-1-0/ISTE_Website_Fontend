@@ -37,17 +37,18 @@ export default function Home() {
     <>
       {loading ? (
         <div className="w-full  h-[100vh] overflow-hidden ">
-          <video
-            src={
-              executed &&
-              (isMobile
-                ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730209244/jcjx8fsnz4esmlowphqp.mp4"
-                : "https://res.cloudinary.com/dleuqns7p/video/upload/v1730269636/c5vsu6mg3ncy8sef68r1.mp4")
-            }
-            autoPlay
-            muted
-            className="  object-contain grayscale hover:grayscale-0 transition-all duration-500"
-          ></video>
+          {executed && (
+            <video
+              src={
+                isMobile
+                  ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730209244/jcjx8fsnz4esmlowphqp.mp4"
+                  : "https://res.cloudinary.com/dleuqns7p/video/upload/v1730269636/c5vsu6mg3ncy8sef68r1.mp4"
+              }
+              autoPlay
+              muted
+              className="object-contain grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          )}
         </div>
       ) : (
         <div>

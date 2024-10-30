@@ -7,16 +7,16 @@ function Faculty() {
     <div className="flex flex-col">
       <div className="my-3 p-4 max-sm:text-lg px-16 max-md:px-4  max-md:text-3xl max-md:justify-center gap-5 text-3xl  max-lg:text-lg ">
         <div className="font-hamlin flex gap-5 max-md:gap-3  text-center">
-          <div className="hover:underline duration-500">
+          <div className="hover:underline underline hover:text-[#27A5EF] duration-500">
             <a href="/team/faculty"> Coordinator</a>
           </div>
-          <div className="hover:underline duration-500">
+          <div className="hover:underline hover:text-[#27A5EF] duration-500">
             <a href="/team/advisory"> Advisory</a>
           </div>
-          <div className="hover:underline duration-500">
+          <div className="hover:underline  hover:text-[#27A5EF] duration-500">
             <a href="/team/board"> Board</a>
           </div>
-          <div className="hover:underline duration-500">
+          <div className="hover:underline hover:text-[#27A5EF]  duration-500">
             <a href="/team/core"> Core</a>
           </div>
         </div>
