@@ -32,7 +32,9 @@ const Domainmain = ({ item }) => {
             autoPlay
             loop
             muted
+            playsInline
             preload="none"
+            style={{ pointerEvents: "none" }}
             className="w-full h-full object-cover 
               transition-all duration-300"
           >

@@ -117,7 +117,7 @@ export default function Page({ params }) {
     if (Data.connectlink) formData.append("connectlink", Data.connectlink);
     if (Data.companyplaced)
       formData.append("companyplaced", Data.companyplaced);
-    if (image) formData.append("boardimage", image);
+    if (image) formData.append("advisoryimage", image);
 
     try {
       const response = await axios.patch(

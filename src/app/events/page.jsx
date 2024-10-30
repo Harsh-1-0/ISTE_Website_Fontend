@@ -108,6 +108,8 @@ const Events = () => {
             }
             autoPlay
             loop
+            playsInline
+            style={{ pointerEvents: "none" }}
             muted
             className="w-full h-full object-cover z-10"
           ></video>

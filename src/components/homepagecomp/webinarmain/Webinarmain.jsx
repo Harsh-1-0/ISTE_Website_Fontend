@@ -72,8 +72,8 @@ const Webinarmain = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2  text-black rounded-full p-3 shadow-lg  transition"/>
-            <CarouselNext className="absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition"/>
+            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2  text-black rounded-full p-3 shadow-lg  transition" />
+            <CarouselNext className="absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition" />
           </Carousel>
         </div>
       </div>
@@ -83,6 +83,8 @@ const Webinarmain = () => {
           autoPlay
           loop
           muted
+          playsinline
+          style={{ pointerEvents: "none" }}
           className="w-full h-full object-cover"
         ></video>
       </div>

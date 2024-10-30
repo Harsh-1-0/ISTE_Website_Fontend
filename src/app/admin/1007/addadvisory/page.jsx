@@ -262,7 +262,7 @@ const AddAdvisory = () => {
                         </span>
                       </div>
                       <p className="text-xs text-gray-500 mt-1">
-                        PNG, JPG up to 10MB
+                        WEBP up to 5MB
                       </p>
                     </div>
                   </div>
