@@ -7,6 +7,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   cursor: url('/Pictures/cursor/cursor.png')0 0,auto;
+  scroll-behavior: smooth;
 }
 
 a, button, .custom-pointer:hover {
@@ -54,6 +55,19 @@ a, button, .custom-pointer:hover {
   :root {
     --radius: 0.5rem;
   }
+}
+
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #27A5EF;
+  border-radius: 8px;
+  height: 100px;
 }
 
 /* *{

@@ -46,7 +46,7 @@ const PastEventsCard = ({
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Image Container */}
-          <div className="relative w-full grayscale group-hover:grayscale-0 border-b-2 border-black aspect-[3/1] overflow-hidden">
+          <div className="relative w-full grayscale group-hover:grayscale-0 border-b-2 border-black aspect-[2/1] overflow-hidden">
             <Image
               src={image}
               alt={title}
@@ -68,7 +68,7 @@ const PastEventsCard = ({
               {speaker}
             </h3>
 
-            <p className="text-sm md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
+            <p className="text-sm md:min-h-[230px] md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
               {description}
             </p>
           </div>

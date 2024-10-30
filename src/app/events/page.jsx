@@ -111,9 +111,10 @@ const Events = () => {
         </div>
 
         <div>
-          <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Our Events
-          </h1>
+        <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+          OUR EVENTS
+          <hr className="h-1 w-[70%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+        </div>
           {events ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
               {events.map((event, index) => (
@@ -133,9 +134,10 @@ const Events = () => {
           )}
         </div>
         <div>
-          <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Gravitas
-          </h1>
+        <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+          GRAVITAS
+          <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+        </div>
           {gravitas ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
               {gravitas.map((event, index) => (
@@ -155,9 +157,10 @@ const Events = () => {
           )}
         </div>
         <div>
-          <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Rivera
-          </h1>
+        <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+          RIVIERA
+          <hr className="h-1 w-[50%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+        </div>
           {rivera ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
               {rivera.map((event, index) => (
@@ -177,9 +180,10 @@ const Events = () => {
           )}
         </div>
         <div>
-          <h1 className="text-center font-anton font-bold text-8xl max-md:text-4xl underline z-30 mt-10">
-            Horizon
-          </h1>
+        <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
+          HORIZON
+          <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+        </div>
           {horizon ? (
             <div className="flex flex-wrap p-8 justify-between z-30">
               {horizon.map((event, index) => (

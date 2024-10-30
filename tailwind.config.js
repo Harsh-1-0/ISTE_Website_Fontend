@@ -32,12 +32,12 @@ module.exports = {
   				}
   			},
         slideInRight: {
-          '0%': { transform: 'translateX(31%)' },
+          '0%': { transform: 'translateX(25%)' },
           '100%': { transform: 'translateX(10%)' },
         },
         slideInLeft: {
           '0%': { transform: 'translateX(-1%)' },
-          '100%': { transform: 'translateX(20%)' },
+          '100%': { transform: 'translateX(16%)' },
         },
         rotateLeft: {
           '0%' : {transform: 'rotate(0)'},
