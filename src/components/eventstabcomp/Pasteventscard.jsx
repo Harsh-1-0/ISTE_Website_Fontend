@@ -33,6 +33,7 @@ const PastEventsCard = ({
         setIsMobile(false);
       }
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobile]);

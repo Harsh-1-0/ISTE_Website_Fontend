@@ -23,14 +23,14 @@ const Upcomingeventscard = ({
           />
         </div>
 
-        <div className="flex flex-col border-y-4 border-black py-5">
-          <div className="pl-5 md:pl-8 p-2 md:py-2 text-2xl md:text-5xl text-black font-anton">
+        <div className="flex flex-col border-y-4 border-black py-5 max-md:py-2">
+          <div className="pl-5 md:pl-8 p-2 max-md:py-1 md:py-2 text-2xl md:text-5xl text-black font-anton">
             {title}
           </div>
-          <div className="pl-5 md:pl-8 p-2 text-xl md:text-2xl font-hamlin text-gray-800">
+          <div className="pl-5 md:pl-8 p-2 max-md:py-1 text-xl md:text-2xl font-hamlin text-gray-800">
             {speaker}
           </div>
-          <div className="pl-5 font-hamlin md:pl-8 p-2 py-2 text-lg md:text-xl text-gray-600 leading-relaxed">
+          <div className="pl-5 font-hamlin md:pl-8 max-md:py-1 p-2 py-2 text-md md:text-xl text-gray-600 md:leading-relaxed ">
             {description}
           </div>
         </div>
