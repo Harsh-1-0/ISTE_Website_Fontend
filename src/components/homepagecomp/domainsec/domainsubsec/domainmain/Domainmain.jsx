@@ -33,6 +33,7 @@ const Domainmain = ({ item }) => {
             loop
             muted
             playsInline
+            controls={false}
             preload="none"
             style={{ pointerEvents: "none" }}
             className="w-full h-full object-cover 
