@@ -15,6 +15,11 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://istevit.in" />
+        <link
+          rel="shortcut icon"
+          type="ico"
+          href="https://res.cloudinary.com/dleuqns7p/image/upload/v1730318429/rbjnces73klbyukr59y5.ico"
+        />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dleuqns7p/image/upload/v1730264533/hsddnsy0pgthy1n7nnra.png"
