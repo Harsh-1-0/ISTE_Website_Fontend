@@ -9,6 +9,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import Image from "next/image";
+
 const Webinarmain = () => {
   const webinarcontent = [
     {
@@ -52,12 +53,13 @@ const Webinarmain = () => {
       imgpath: "/Pictures/webinarthumbnails/GCP.png",
     },
   ];
+
   return (
     <div
       id="webinar"
       className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
     >
-      <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-[url('/Pictures/webinarbg.png')] bg-fixed bg-center bg-repeat">
+      <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-center bg-repeat bg-cover bg-[url('/Pictures/webinarbg.png')]">
         <div className="absolute inset-0 justify-center">
           <Carousel
             opts={{
@@ -72,13 +74,13 @@ const Webinarmain = () => {
           >
             <CarouselContent>
               {webinarcontent.map((item, index) => (
-                <CarouselItem key={index} className="">
+                <CarouselItem key={index} className="z-30">
                   <Link
                     href={item.path}
                     target="_blank"
                     className="flex justify-center"
                   >
-                    <div className="mx-10 ju" key={item.title}>
+                    <div className="mx-10" key={item.title}>
                       <Image
                         src={item.imgpath}
                         height={1080}
@@ -91,23 +93,28 @@ const Webinarmain = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2  text-black rounded-full p-3 shadow-lg  transition" />
+            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition" />
             <CarouselNext className="absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition" />
           </Carousel>
         </div>
       </div>
-      <div className="md:w-full md:h-full relative z-10">
+      <div className="md:w-full md:h-full relative z-10 overflow-hidden">
         <video
-          src="https://res.cloudinary.com/dleuqns7p/video/upload/v1729665675/pfba3jkv0iboecqo7jjf.mp4 "
+          src="https://res.cloudinary.com/dleuqns7p/video/upload/v1729665675/pfba3jkv0iboecqo7jjf.mp4"
           autoPlay
           loop
           muted
-          playsinline
+          playsInline
           controls={false}
-          style={{ pointerEvents: "none" }}
-          className="w-full h-full object-cover"
+          style={{
+            pointerEvents: "none",
+            objectFit: "cover",
+            objectPosition: "center",
+            willChange: "transform",
+          }}
+          className="w-full h-full object-cover z-10"
         ></video>
-        <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
+        <div className="absolute inset-0 bg-transparent pointer-events-auto"></div>
       </div>
     </div>
   );

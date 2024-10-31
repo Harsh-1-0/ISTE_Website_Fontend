@@ -4,7 +4,6 @@ const Links = ({ isOpen, handleClick }) => {
   const linkroll = [
     { title: "HOME", path: "/" },
     { title: "TEAM", path: "/team/faculty" },
-    { title: "PROJECTS", path: "/projects" },
     { title: "EVENTS", path: "/events" },
     { title: "TFV", path: "/tfv" },
     { title: "GALLERY", path: "/gallery" },

@@ -60,7 +60,7 @@ const PastEventsCard = ({
           </div>
 
           {/* Content Container */}
-          <div className="flex flex-col border-t-4 border-black p-4 md:p-6 transform transition-all duration-500">
+          <div className="flex flex-col border-t-4 border-black p-4 md:p-6 transform transition-all duration-500 md:min-h-[300px]">
             <h2 className="text-lg md:text-3xl font-bold mb-2 md:mb-3 transform transition-all duration-500 group-hover:translate-x-2">
               {title}
             </h2>
@@ -69,7 +69,7 @@ const PastEventsCard = ({
               {speaker}
             </h3>
 
-            <p className="text-sm md:min-h-[200px] md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
+            <p className="text-sm md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
               {description}
             </p>
           </div>

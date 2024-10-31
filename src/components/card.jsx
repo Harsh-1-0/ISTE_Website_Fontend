@@ -7,7 +7,7 @@ function Card(props) {
   return (
     <div
       onClick={props.onClick}
-      className="group w-full cursor-pointer max-w-sm bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
+      className="group w-full max-w-sm bg-whites border-4 border-black flex flex-col md:flex-row overflow-hidden 
         transform transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
     >
       {/* Image Container with Animation */}
@@ -29,14 +29,14 @@ function Card(props) {
         {/* Text Content */}
         <div className="flex flex-col items-start py-2 px-5 mb-4">
           <h2
-            className="text-3xl   leading-tight transform transition-all duration-500 
+            className="text-[1.75rem]   leading-tight transform transition-all duration-500 
             translate-x-0 group-hover:translate-x-2"
           >
             {props.name}
           </h2>
 
           <h3
-            className="text-2xl leading-tight transform transition-all duration-500 delay-75
+            className="text-[1.4rem] leading-tight transform transition-all duration-500 delay-75
             translate-x-0 group-hover:translate-x-2"
           >
             {props.surname}
