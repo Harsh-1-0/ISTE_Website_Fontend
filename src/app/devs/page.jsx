@@ -25,7 +25,7 @@ const DevsData = [
   {
     name: "SHANKAR BS",
     role: "Developer",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
+    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1730354529/l4z1fjoxprtj1wcthaw0.png",
     linkdin: "https://www.linkedin.com/in/shankar-bs/",
   },
   {
