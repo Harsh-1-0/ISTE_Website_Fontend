@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <div className="w-full  h-[100vh]">
+        <div className="w-full  h-[100vh] relative">
           {executed && (
             <video
               src={
@@ -50,6 +50,7 @@ export default function Home() {
               className="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 overflow-y-hidden"
             />
           )}
+          <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
         </div>
       ) : (
         <div>

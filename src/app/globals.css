@@ -15,6 +15,10 @@ video::-webkit-media-controls {
   -webkit-appearance: none;
 }
 
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
 a, button, .custom-pointer:hover {
   cursor: url('/Pictures/cursor/pointer.png')0 0, pointer;
 }

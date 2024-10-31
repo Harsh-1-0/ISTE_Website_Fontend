@@ -100,7 +100,8 @@ const Events = () => {
         <Eventsheader />
         <div className="relative   w-full h-full my-16 max-md:my-20">
           {executed && (
-            <video
+            <div className="relative w-full h-auto">
+              <video
               src={
                 isMobile
                   ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730270618/uqyvjxkxycehuv6x24ib.mp4"
@@ -113,7 +114,10 @@ const Events = () => {
               style={{ pointerEvents: "none" }}
               muted
               className="w-full h-full object-cover z-10"
-            ></video>
+              ></video>
+              <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
+            </div>
+            
           )}
           {upcoming.length > 0 && (
             <div className="absolute inset-0 flex items-center justify-center z-20">

@@ -69,7 +69,7 @@ const PastEventsCard = ({
               {speaker}
             </h3>
 
-            <p className="text-sm md:min-h-[230px] md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
+            <p className="text-sm md:min-h-[200px] md:text-lg text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2">
               {description}
             </p>
           </div>

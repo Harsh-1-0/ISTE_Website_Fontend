@@ -107,6 +107,7 @@ const Webinarmain = () => {
           style={{ pointerEvents: "none" }}
           className="w-full h-full object-cover"
         ></video>
+        <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
       </div>
     </div>
   );

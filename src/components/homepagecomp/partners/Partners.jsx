@@ -7,8 +7,37 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import React, { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 const Partners = () => {
+  const [inView, setInView] = useState(false);
+  const hrRef = useRef(null);
+
+  useEffect(() => {
+    if (!hrRef.current) {
+      console.warn("hrRef is not attached to the element.");
+      return;
+    }
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          console.log("Entry observed:", entry);
+          setInView(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 }
+    );
+  
+    observer.observe(hrRef.current);
+  
+    return () => {
+
+      if (hrRef.current) {
+        observer.unobserve(hrRef.current);
+      }
+    };
+  }, []);
   const partnersroll = [
     {
       title: "GitHub",
@@ -91,7 +120,11 @@ const Partners = () => {
     <div className="flex flex-col justify-center items-center my-4 md:my-16">
       <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
         PARTNERS
-        <hr className="h-1 w-[60%] md:w-[30%] bg-black mt-2 md:mt-4 transition-all duration-500 group-hover:w-[90%]" />
+        <hr 
+        ref={hrRef}
+        className={`h-1 bg-black mt-2 md:mt-4 transition-all duration-500 ${
+          inView ? "w-[90%] " : "w-[60%]"
+        }`}/>
       </div>
       <div className="hidden  md:grid md:grid-cols-4  md:gap-4 my-8">
         {partnersroll.map((link) => (

@@ -6,13 +6,13 @@ const Heropage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-nowrap max-w-96 mt-3 md:mt-0 md:my-3">
-        <p className="text-[41px] md:text-6xl lg:text-[175px] leading-none py-1 md:py-3">
+        <p className="max-md:text-[41px] md:text-6xl lg:text-[175px] leading-none py-1 md:py-3">
           INDIAN SOCIETY
         </p>
         <p className="text-[26px] md:text-5xl lg:text-7xl hover:text-[#27A5EF] transition-all duration-150 ease-in-out">
           FOR
         </p>
-        <p className="text-[41px] md:text-6xl lg:text-[175px] leading-none py-1 md:py-3">
+        <p className="max-md:text-[41px] md:text-6xl lg:text-[175px] leading-none py-1 md:py-3">
           TECHNICAL EDUCATION
         </p>
       </div>

@@ -26,7 +26,7 @@ const Domainmain = ({ item }) => {
         <div
           className="w-[275px] h-[275px] overflow-hidden 
           transform transition-all duration-300 
-          group-hover:scale-105"
+          group-hover:scale-105 relative"
         >
           <video
             autoPlay
@@ -42,6 +42,7 @@ const Domainmain = ({ item }) => {
             <source src={item.imgpath} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
         </div>
 
         {/* Description with staggered sliding animation */}
