@@ -30,7 +30,7 @@ export default function Page({ params }) {
         const result = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/board/${regno}`
         );
-        console.log(result.data);
+        // console.log(result.data);
         setResponse(result.data);
       } catch (err) {
         console.log(err);
