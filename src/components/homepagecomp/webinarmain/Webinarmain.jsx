@@ -93,8 +93,8 @@ const Webinarmain = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6 shadow-lg transition z-40" />
-            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6 shadow-lg transition z-40" />
+            <CarouselPrevious className="absolute left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
+            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
           </Carousel>
         </div>
       </div>

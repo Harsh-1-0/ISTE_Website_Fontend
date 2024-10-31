@@ -51,7 +51,7 @@ function Faculty() {
               </h3>
 
               <p className="text-xl mt-3 font-hamlin font-bold text-gray-600 transform transition-all duration-500 delay-100 group-hover:translate-x-2 opacity-90 group-hover:opacity-100">
-                Ex-Director of Student Welfare
+                Professor Higher Academic Grade, SCE{" "}
               </p>
             </div>
 

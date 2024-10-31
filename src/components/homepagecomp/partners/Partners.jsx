@@ -4,8 +4,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+ 
 } from "@/components/ui/carousel";
 import React, { useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -18,7 +17,7 @@ const Partners = () => {
       console.warn("hrRef is not attached to the element.");
       return;
     }
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,11 +27,10 @@ const Partners = () => {
       },
       { threshold: 0.1 }
     );
-  
-    observer.observe(hrRef.current);
-  
-    return () => {
 
+    observer.observe(hrRef.current);
+
+    return () => {
       if (hrRef.current) {
         observer.unobserve(hrRef.current);
       }
@@ -120,11 +118,12 @@ const Partners = () => {
     <div className="flex flex-col justify-center items-center my-4 md:my-16">
       <div className="text-6xl md:text-8xl lg:text-9xl font-bold py-4 flex flex-col items-center group w-full hover:text-[#27A5EF]">
         PARTNERS
-        <hr 
-        ref={hrRef}
-        className={`h-1 bg-black mt-2 md:mt-4 transition-all duration-500 ${
-          inView ? "w-[90%] " : "w-[60%]"
-        }`}/>
+        <hr
+          ref={hrRef}
+          className={`h-1 bg-black mt-2 md:mt-4 transition-all duration-500 ${
+            inView ? "w-[90%] " : "w-[60%]"
+          }`}
+        />
       </div>
       <div className="hidden  md:grid md:grid-cols-4  md:gap-4 my-8">
         {partnersroll.map((link) => (
@@ -150,8 +149,6 @@ const Partners = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
       </div>
       <div className="font-hamlin text-lg md:text-xl">
