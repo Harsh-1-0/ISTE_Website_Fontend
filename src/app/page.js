@@ -47,7 +47,7 @@ export default function Home() {
               autoPlay
               muted
               playsInline
-              className="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500 overflow-y-hidden"
+              className="w-full h-full object-cover transition-all duration-500 overflow-y-hidden"
             />
           )}
           <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>

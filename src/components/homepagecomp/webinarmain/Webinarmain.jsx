@@ -74,7 +74,7 @@ const Webinarmain = () => {
           >
             <CarouselContent>
               {webinarcontent.map((item, index) => (
-                <CarouselItem key={index} className="z-30">
+                <CarouselItem key={index} className="z-30 px-10">
                   <Link
                     href={item.path}
                     target="_blank"
@@ -93,8 +93,8 @@ const Webinarmain = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-1 md:left-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition" />
-            <CarouselNext className="absolute right-1 md:right-5 top-1/2 transform -translate-y-1/2 text-black rounded-full p-3 shadow-lg transition" />
+            <CarouselPrevious className="absolute left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6 shadow-lg transition z-40" />
+            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6 shadow-lg transition z-40" />
           </Carousel>
         </div>
       </div>

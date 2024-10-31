@@ -99,7 +99,7 @@ const Core = () => {
             <p className="text-center flex justify-center items-center p-4 font-hamlin text-gray-500">
               {filteredResponse.length === 0
                 ? "No results found"
-                : "Thats Our Lovely Core "}
+                : "Thats Our Lovely Core  "}
               {filteredResponse && (
                 <Image
                   src="https://res.cloudinary.com/dleuqns7p/image/upload/v1730130545/iyp3bwhmeogekcncsnk4.png"

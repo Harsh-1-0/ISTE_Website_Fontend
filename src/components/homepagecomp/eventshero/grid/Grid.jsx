@@ -11,8 +11,8 @@ const Grid = () => {
       path:"/Pictures/gridpngs/pygamegrid.png",
     },
     {
-      title:"Pulsync",
-      path: "/Pictures/gridpngs/pulsyncgrid.png",
+      title:"Nexus",
+      path: "/Pictures/gridpngs/nexusgrid.png",
     }
   ]
   return ( 
