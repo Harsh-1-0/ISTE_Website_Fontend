@@ -100,7 +100,7 @@ const Webinarmain = () => {
       </div>
       <div className="md:w-full md:h-full relative z-10 overflow-hidden">
         <video
-          src="/Videos/Webinar.mp4"
+          src="https://res.cloudinary.com/drmk3hter/video/upload/v1733469376/webinarbgrun_vihz7i.mp4"
           autoPlay
           loop
           muted

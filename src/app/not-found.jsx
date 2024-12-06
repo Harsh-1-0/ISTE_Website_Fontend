@@ -10,9 +10,7 @@ export default function NotFound() {
   const handleInteraction = () => {
     setHasInteracted(true);
     if (!audio) {
-      audio = new Audio(
-        "https://res.cloudinary.com/dleuqns7p/video/upload/v1729866841/q22ncmffx7jiiqs6crgt.mp3"
-      );
+      audio = new Audio("/Videos/404audio.mp3");
       audio
         .play()
         .then(() => setAudioReady(true))
@@ -69,7 +67,7 @@ export default function NotFound() {
         loop
         muted
         className="w-1/2 h-1/2 max-md:w-10/12 max-md:mt-4 mt-16 object-cover"
-        src="/Videos/404.mp4"
+        src="https://res.cloudinary.com/drmk3hter/video/upload/v1733467349/404_drhihm.mp4"
       />
     </div>
   );

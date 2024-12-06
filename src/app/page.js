@@ -39,7 +39,11 @@ export default function Home() {
         <div className="w-full  h-[100vh] relative">
           {executed && (
             <video
-              src={isMobile ? "/Videos/mobLoad.mp4" : "/Videos/deskLoad.mp4"}
+              src={
+                isMobile
+                  ? "https://res.cloudinary.com/drmk3hter/video/upload/v1733467466/mobLoad_k9ibhq.mp4"
+                  : "https://res.cloudinary.com/drmk3hter/video/upload/v1733467478/deskLoad_ljizow.mp4"
+              }
               autoPlay
               muted
               playsInline
