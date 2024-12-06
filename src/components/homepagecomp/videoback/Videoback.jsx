@@ -29,7 +29,7 @@ const Videoback = ({ srcval }) => {
     <div className="group w-full h-[50%] md:h-screen overflow-x-hidden my-3 md:my-8 relative">
       <video
         ref={videoRef}
-        src="https://res.cloudinary.com/dleuqns7p/video/upload/v1729665630/jxkiuwj4bzmbyyb6330q.mp4"
+        src="/Videos/Landing.mp4"
         autoPlay
         loop
         muted

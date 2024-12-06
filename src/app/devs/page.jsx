@@ -13,25 +13,25 @@ const DevsData = [
   {
     name: "HARSH KUMAR SINHA",
     role: "Developer",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964323/omvamc3841hskzen6j78.png",
+    img: "https://i.ibb.co/MV8vHcr/HARSH.png",
     linkdin: "https://www.linkedin.com/in/harsh-kumar-sinha-604929216/",
   },
   {
     name: "GAGAN N BANGARAGIRI",
     role: "Designer",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/amawix57zm06dsgn9lpp.png",
+    img: "https://i.ibb.co/C71Fhsk/GEG.png",
     linkdin: "https://www.linkedin.com/in/gagan-n-bangaragiri/",
   },
   {
     name: "SHANKAR BS",
     role: "Developer",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1730354529/l4z1fjoxprtj1wcthaw0.png",
+    img: "https://i.ibb.co/YX3fxP7/SHANKAR.png",
     linkdin: "https://www.linkedin.com/in/shankar-bs/",
   },
   {
     name: "ARADHYE SWARUP",
     role: "Designer",
-    img: "https://res.cloudinary.com/dleuqns7p/image/upload/v1729964320/hvrssvhkrs2pufz72nxf.png",
+    img: "https://i.ibb.co/xSMTyFZ/ARADHYE.png",
     linkdin: "https://www.linkedin.com/in/aradhyeswarup/",
   },
 ];

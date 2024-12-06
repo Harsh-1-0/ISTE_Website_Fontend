@@ -57,7 +57,7 @@ const Webinarmain = () => {
   return (
     <div
       id="webinar"
-      className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
+      className="relative w-full   my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
     >
       <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-center bg-repeat bg-cover bg-[url('/Pictures/webinarbg.png')]">
         <div className="absolute inset-0 justify-center">
@@ -72,7 +72,7 @@ const Webinarmain = () => {
               }),
             ]}
           >
-            <CarouselContent>
+            <CarouselContent className="items-center">
               {webinarcontent.map((item, index) => (
                 <CarouselItem key={index} className="z-30 px-10">
                   <Link
@@ -80,7 +80,7 @@ const Webinarmain = () => {
                     target="_blank"
                     className="flex justify-center"
                   >
-                    <div className="mx-10" key={item.title}>
+                    <div className="px-10" key={item.title}>
                       <Image
                         src={item.imgpath}
                         height={1080}
@@ -93,14 +93,14 @@ const Webinarmain = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
-            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
+            <CarouselPrevious className="absolute  left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
+            <CarouselNext className="absolute  right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full p-6  shadow-lg transition z-40" />
           </Carousel>
         </div>
       </div>
       <div className="md:w-full md:h-full relative z-10 overflow-hidden">
         <video
-          src="https://res.cloudinary.com/dleuqns7p/video/upload/v1729665675/pfba3jkv0iboecqo7jjf.mp4"
+          src="/Videos/Webinar.mp4"
           autoPlay
           loop
           muted

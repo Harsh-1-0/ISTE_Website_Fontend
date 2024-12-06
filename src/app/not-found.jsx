@@ -52,11 +52,15 @@ export default function NotFound() {
           not here{" "}
           {!hasInteracted ? (
             <div className="text-2xl  font-hamlin max-md:text-xl mt-2">
-              Although you can hear a tune if you are fast enough to interact with
-              this page <br /> else try again by refreshing the page
+              Although you can hear a tune if you are fast enough to interact
+              with this page <br /> else try again by refreshing the page
             </div>
           ) : (
-            <div>Although you did find our <span className="font-semibold">record player,</span> so enjoy the tunes</div>
+            <div>
+              Although you did find our{" "}
+              <span className="font-semibold">record player,</span> so enjoy the
+              tunes
+            </div>
           )}
         </div>
       </div>
@@ -64,8 +68,8 @@ export default function NotFound() {
         autoPlay
         loop
         muted
-        className="w-1/4 h-1/4 max-md:w-10/12 max-md:mt-4 mt-16 object-cover"
-        src="https://res.cloudinary.com/dleuqns7p/video/upload/v1729866478/z3lum3muozpd2fnmmpwr.mp4"
+        className="w-1/2 h-1/2 max-md:w-10/12 max-md:mt-4 mt-16 object-cover"
+        src="/Videos/404.mp4"
       />
     </div>
   );

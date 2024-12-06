@@ -102,22 +102,21 @@ const Events = () => {
           {executed && (
             <div className="relative w-full h-auto">
               <video
-              src={
-                isMobile
-                  ? "https://res.cloudinary.com/dleuqns7p/video/upload/v1730270618/uqyvjxkxycehuv6x24ib.mp4"
-                  : "/Pictures/eventsvid/upcomingbg.mp4"
-              }
-              autoPlay
-              loop
-              playsInline
-              controls={false}
-              style={{ pointerEvents: "none" }}
-              muted
-              className="w-full h-full object-cover z-10"
+                src={
+                  isMobile
+                    ? "/Videos/mobUpcoming.mp4"
+                    : "/Videos/deskUpcoming.mp4"
+                }
+                autoPlay
+                loop
+                playsInline
+                controls={false}
+                style={{ pointerEvents: "none" }}
+                muted
+                className="w-full h-full object-cover z-10"
               ></video>
               <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
             </div>
-            
           )}
           {upcoming.length > 0 && (
             <div className="absolute inset-0 flex items-center justify-center z-20">
