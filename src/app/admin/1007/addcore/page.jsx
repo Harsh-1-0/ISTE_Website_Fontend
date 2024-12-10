@@ -63,7 +63,7 @@ const AddCore = () => {
     try {
       const file = image;
       const galleryResult = await axios.post(
-        `${process.env.IMGBB_URL}?key=${process.env.IMGBB_API_KEY}`,
+        `${process.env.NEXT_PUBLIC_IMGBB_URL}?key=${process.env.NEXT_PUBLIC_IMGBB_API_KEY}`,
         { image: file.buffer.toString("base64") },
         { headers: { "Content-Type": "multipart/form-data" } }
       );
