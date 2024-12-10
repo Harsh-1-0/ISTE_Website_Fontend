@@ -59,16 +59,9 @@ const AddCore = () => {
     Object.keys(Data).forEach((key) => {
       formData.append(key, Data[key]);
     });
+    formData.append("coreimage", image);
 
     try {
-      const file = image;
-      const galleryResult = await axios.post(
-        `${process.env.NEXT_PUBLIC_IMGBB_URL}?key=${process.env.NEXT_PUBLIC_IMGBB_API_KEY}`,
-        { image: file.buffer.toString("base64") },
-        { headers: { "Content-Type": "multipart/form-data" } }
-      );
-      form.append("coreimage", galleryResult.data.data.url);
-
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/core`,
         formData,

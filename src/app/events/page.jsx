@@ -104,8 +104,8 @@ const Events = () => {
               <video
                 src={
                   isMobile
-                    ? "/Videos/mobUpcoming.mp4"
-                    : "/Videos/deskUpcoming.mp4"
+                    ? "https://res.cloudinary.com/drmk3hter/video/upload/v1733467353/mobUpcoming_kg3sso.mp4"
+                    : "https://res.cloudinary.com/drmk3hter/video/upload/v1733467355/deskUpcoming_rhn17j.mp4"
                 }
                 autoPlay
                 loop
