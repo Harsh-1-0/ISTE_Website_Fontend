@@ -12,6 +12,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const Events = () => {
   const [upcoming, setUpcoming] = useState(false);
+  const [masterFetch, setMasterFetch] = useState({});
   const [events, setEvents] = useState(false);
   const [gravitas, setGravitas] = useState(false);
   const [rivera, setRivera] = useState(false);
@@ -45,6 +46,16 @@ const Events = () => {
       }
     };
 
+    const getAllEvents = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/event`
+        );
+        setMasterFetch(response.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     // Fetch past events data
     const getEvents = async () => {
       try {

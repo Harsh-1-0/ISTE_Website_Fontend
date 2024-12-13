@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CiCalendar, CiClock2, CiLocationOn } from "react-icons/ci";
 
-const Upcomingeventscard = ({
+const UpcomingEventsCard = ({
   title,
   image,
   date,
@@ -11,48 +11,46 @@ const Upcomingeventscard = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col self-center m-6 md:my-[150px] w-[320px] md:w-[62%] p-4 border-4 border-white shadow-[0_0_15px_rgba(255,255,255,0.6)] transition-all duration-300 hover:border-[#27A5EF] hover:shadow-[0_0_25px_rgba(39,165,239,0.5)]">
-      <div className="flex flex-col bg-white w-full h-full border-black border-4">
-        <div className="flex items-center justify-center">
-          <Image
-            src={image}
-            alt="eventimg"
-            width={1080}
-            height={1080}
-            className="w-full h-full object-cover"
-          />
-        </div>
+    <div className="w-full border-black border-4 max-w-xl md:max-w-2xl mx-auto bg-white shadow-lg rounded-sm overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
+      <div className="relative border-b-2 border-black w-full h-56 md:h-72 overflow-hidden">
+        <Image
+          src={image}
+          alt="Event Image"
+          fill
+          className="object-cover absolute inset-0"
+          sizes="(max-width: 768px) 100vw, 800px"
+        />
+      </div>
 
-        <div className="flex flex-col border-y-4 border-black py-5 max-md:py-2">
-          <div className="pl-5 md:pl-8 p-2 max-md:py-1 md:py-2 text-2xl md:text-5xl text-black font-anton">
-            {title}
-          </div>
-          <div className="pl-5 md:pl-8 p-2 max-md:py-1 text-xl md:text-2xl font-hamlin text-gray-800">
-            {speaker}
-          </div>
-          <div className="pl-5 font-hamlin md:pl-8 max-md:py-1 p-2 py-2 text-md md:text-xl text-gray-600 md:leading-relaxed ">
-            {description}
-          </div>
-        </div>
+      <div className="p-5 md:p-6 space-y-3">
+        <h2 className="text-2xl md:text-3xl font-anton text-gray-900 truncate">
+          {title}
+        </h2>
+        <h3 className="text-lg md:text-xl font-hamlin text-gray-700">
+          {speaker}
+        </h3>
+        <p className="text-base md:text-lg font-hamlin text-gray-600 line-clamp-3">
+          {description}
+        </p>
 
-        <div className="grid md:grid-cols-3 font-hamlin py-2 md:py-0 text-sm md:text-lg justify-between">
-          <div className="flex items-center p-1 md:p-3">
-            <div className="px-1 md:px-2">
-              <CiCalendar size={20} className="md:w-[30px] md:h-[30px]" />
-            </div>
-            <div className="px-1 font-bold md:px-2 text-gray-700">{date}</div>
+        <div className="grid grid-cols-3 gap-3 mt-4 border-t pt-4">
+          <div className="flex items-center space-x-3">
+            <CiCalendar className="w-6 h-6 md:w-7 md:h-7 text-blue-500" />
+            <span className="text-sm md:text-base font-bold text-gray-700">
+              {date}
+            </span>
           </div>
-          <div className="flex items-center md:border-x-4 md:border-black p-1 md:p-2">
-            <div className="px-1 md:px-2">
-              <CiClock2 size={20} className="md:w-[30px] md:h-[30px]" />
-            </div>
-            <div className="px-1 font-bold md:px-2 text-gray-700">{time}</div>
+          <div className="flex items-center space-x-3 border-x px-3">
+            <CiClock2 className="w-6 h-6 md:w-7 md:h-7 text-green-500" />
+            <span className="text-sm md:text-base font-bold text-gray-700">
+              {time}
+            </span>
           </div>
-          <div className="flex items-center p-1 md:p-2">
-            <div className="px-1 md:px-2">
-              <CiLocationOn size={20} className="md:w-[30px] md:h-[30px]" />
-            </div>
-            <div className="px-1 font-bold md:px-2 text-gray-700">{venue}</div>
+          <div className="flex items-center space-x-3">
+            <CiLocationOn className="w-6 h-6 md:w-7 md:h-7 text-red-500" />
+            <span className="text-sm md:text-base font-bold text-gray-700">
+              {venue}
+            </span>
           </div>
         </div>
       </div>
@@ -60,4 +58,4 @@ const Upcomingeventscard = ({
   );
 };
 
-export default Upcomingeventscard;
+export default UpcomingEventsCard;

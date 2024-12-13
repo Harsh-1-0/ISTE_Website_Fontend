@@ -59,7 +59,7 @@ const AddAdvisory = () => {
     e.preventDefault();
     const formData = new FormData();
     Object.keys(Data).forEach((key) => {
-      formData.append(key, Data[key]);
+      formData.append(key, Data[key].trim());
     });
     formData.append("advisoryimage", image);
 

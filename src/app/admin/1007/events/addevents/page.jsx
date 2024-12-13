@@ -26,6 +26,8 @@ function AddEvent() {
     speaker: "",
     description: "",
     venue: "",
+    type: "",
+    date: "",
   });
 
   const [formErrors, setFormErrors] = useState({});

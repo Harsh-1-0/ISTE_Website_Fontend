@@ -15,26 +15,25 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://istevit.in" />
-        <link
+        {/* <link
           rel="shortcut icon"
           type="ico"
           href="https://res.cloudinary.com/dleuqns7p/image/upload/v1730318429/rbjnces73klbyukr59y5.ico"
-        />
+        /> */}
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/dleuqns7p/image/upload/v1730264533/hsddnsy0pgthy1n7nnra.png"
+          content="https://i.ibb.co/SQW9cnV/metaiste.png"
         />
       </head>
       <body className="font-anton min-h-screen flex flex-col justify-between">
         {children}
-      </body>
-      {/* Lord Shankar */}
-      {/* Harsh Kumar Single */}
-      {/* Peter Palker Was Here */}
-      {/* Cj Was Here */}
-      {/* BurntDosa */}
-      {/* For You for finding this */}
-      {/*                          
+        {/* Lord Shankar */}
+        {/* Harsh Kumar Single */}
+        {/* Peter Palker Was Here */}
+        {/* Cj Was Here */}
+        {/* BurntDosa */}
+        {/* For You for finding this */}
+        {/*                          
                             .-=+*#%%%%%#*=:                                       
                         .=*@@@@@%#*++**#@@@@#=.                                
                       :#@@@#=:.          .=#@@@*:                                   
@@ -68,6 +67,7 @@ export default function RootLayout({ children }) {
     .:::.         %@@.                           =@@+                                     
                  .@@%                            +@@=                                     
                  -@@*                            +@@-  */}
+      </body>
     </html>
   );
 }
