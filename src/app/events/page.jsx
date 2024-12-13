@@ -56,53 +56,25 @@ const Events = () => {
         console.log(err);
       }
     };
-    // Fetch past events data
-    const getEvents = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/event`
-        );
-        setEvents(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    const getGravitas = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/gravitas`
-        );
-        setGravitas(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    const getRivera = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/rivera`
-        );
-        setRivera(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    const getHorizon = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/horizon`
-        );
-        setHorizon(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+    getAllEvents();
     getUpcoming();
-    getHorizon();
-    getGravitas();
-    getRivera();
-    getEvents();
   }, []);
+  useEffect(() => {
+    if (masterFetch.length > 0) {
+      setHorizon(
+        masterFetch.filter((event) => event.type.toLowerCase() === "horizon")
+      );
+      setGravitas(
+        masterFetch.filter((event) => event.type.toLowerCase() === "gravitas")
+      );
+      setRivera(
+        masterFetch.filter((event) => event.type.toLowerCase() === "rivera")
+      );
+      setEvents(
+        masterFetch.filter((event) => event.type.toLowerCase() === "event")
+      );
+    }
+  }, [masterFetch]);
 
   return (
     <>
