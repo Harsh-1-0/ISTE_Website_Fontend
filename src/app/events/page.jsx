@@ -60,22 +60,77 @@ const Events = () => {
     getUpcoming();
   }, []);
   useEffect(() => {
-    if (masterFetch.length > 0) {
-      setHorizon(
-        masterFetch.filter((event) => event.type.toLowerCase() === "horizon")
-      );
-      setGravitas(
-        masterFetch.filter((event) => event.type.toLowerCase() === "gravitas")
-      );
-      setRivera(
-        masterFetch.filter((event) => event.type.toLowerCase() === "rivera")
-      );
-      setEvents(
-        masterFetch.filter((event) => event.type.toLowerCase() === "event")
-      );
-    }
-  }, [masterFetch]);
+    const filter = () => {
+      if (masterFetch.length > 0) {
+        const horizonArray = masterFetch.filter(
+          (event) => event.type.toLowerCase() === "horizon"
+        );
+        const sortHorizon = async () => {
+          if (horizonArray.length > 0) {
+            const sortedHorizon = await horizonArray.sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            });
 
+            setHorizon(sortedHorizon);
+          }
+        };
+        sortHorizon();
+
+        const gravitasArray = masterFetch.filter(
+          (event) => event.type.toLowerCase() === "gravitas"
+        );
+
+        const sortGravitas = async () => {
+          if (gravitasArray.length > 0) {
+            const sortedGravitas = await gravitasArray.sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            });
+            setGravitas(sortedGravitas);
+          }
+        };
+        sortGravitas();
+        const riveraArray = masterFetch.filter(
+          (event) => event.type.toLowerCase() === "rivera"
+        );
+        console.log(riveraArray);
+        const sortRivera = async () => {
+          if (riveraArray.length > 0) {
+            const sortedRivera = await riveraArray.sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            });
+            setRivera(sortedRivera);
+          }
+        };
+        sortRivera();
+
+        const eventArray = masterFetch.filter(
+          (event) => event.type.toLowerCase() === "event"
+        );
+        const sortEvents = async () => {
+          if (eventArray.length > 0) {
+            const sortedEvents = await eventArray.sort((a, b) => {
+              return new Date(b.date) - new Date(a.date);
+            });
+            setEvents(sortedEvents);
+          }
+        };
+        sortEvents();
+      }
+    };
+    filter();
+  }, [masterFetch]);
+  useEffect(() => {
+    const sortGravitas = () => {
+      if (gravitas.length > 0) {
+        setGravitas(
+          gravitas.sort((a, b) => {
+            new Date(b.date) - new Date(a.date);
+          })
+        );
+      }
+    };
+    sortGravitas();
+  }, [horizon, gravitas]);
   return (
     <>
       <Navbar />
