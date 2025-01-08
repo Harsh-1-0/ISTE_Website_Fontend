@@ -92,7 +92,6 @@ const Events = () => {
         const riveraArray = masterFetch.filter(
           (event) => event.type.toLowerCase() === "rivera"
         );
-        console.log(riveraArray);
         const sortRivera = async () => {
           if (riveraArray.length > 0) {
             const sortedRivera = await riveraArray.sort((a, b) => {

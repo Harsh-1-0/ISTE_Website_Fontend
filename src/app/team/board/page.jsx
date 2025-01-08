@@ -17,7 +17,6 @@ const Core = () => {
         const result = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/board`
         );
-        console.log(result);
         setResponse(result.data); // Set only the data part of the response
         setFilteredResponse(result.data); // Initialize filtered data with the full response
       } catch (err) {
