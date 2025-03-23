@@ -18,6 +18,11 @@ const nextConfig = {
         hostname: "i.ibb.co",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "iste-website-v2.s3.ap-south-1.amazonaws.com",
+        pathname: "/**",
+      },
     ],
   },
 };

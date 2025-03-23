@@ -42,7 +42,7 @@ const Domainmain = ({ item }) => {
             <source src={item.imgpath} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
+          <div className="absolute inset-0 bg-transparent pointer-events-auto"></div>
         </div>
 
         {/* Description with staggered sliding animation */}

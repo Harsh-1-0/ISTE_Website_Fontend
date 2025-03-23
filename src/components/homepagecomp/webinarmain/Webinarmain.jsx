@@ -57,7 +57,7 @@ const Webinarmain = () => {
   return (
     <div
       id="webinar"
-      className="relative w-full   my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
+      className="relative w-full my-10 grayscale hover:grayscale-0 transition-all duration-150 overflow-x-hidden"
     >
       <div className="absolute inset-0 z-20 flex items-center justify-center text-white bg-center bg-fixed bg-repeat bg-cover bg-[url('/Pictures/webinarbg.png')]">
         <div className="absolute inset-0 justify-center">
@@ -68,7 +68,8 @@ const Webinarmain = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 5000,
+                delay: 3000, // Faster autoplay for better user engagement
+                stopOnInteraction: false,
               }),
             ]}
           >
@@ -94,16 +95,17 @@ const Webinarmain = () => {
               ))}
             </CarouselContent>
             <CarouselPrevious className="absolute left-5 md:left-8 top-1/2 transform -translate-y-1/2 text-black rounded-full shadow-lg transition z-40 size-1 p-3 md:size-5 md:p-6" />
-            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full  shadow-lg transition z-40 size-1 p-3 md:size-5 md:p-6" />
+            <CarouselNext className="absolute right-5 md:right-8 top-1/2 transform -translate-y-1/2 text-black rounded-full shadow-lg transition z-40 size-1 p-3 md:size-5 md:p-6" />
           </Carousel>
         </div>
       </div>
       <div className="md:w-full md:h-full relative z-10 overflow-hidden">
         <video
-          src="https://res.cloudinary.com/drmk3hter/video/upload/v1733469376/webinarbgrun_vihz7i.mp4"
+          src="https://iste-website-v2.s3.ap-south-1.amazonaws.com/abstract-gradient-background.mp4"
           autoPlay
           loop
           muted
+          preload="auto" // Ensures video starts instantly
           playsInline
           controls={false}
           style={{

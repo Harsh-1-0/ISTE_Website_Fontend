@@ -12,45 +12,55 @@ import Projectsembed from "@/components/homepagecomp/projectsembed/Projectsembed
 import Eventshero from "@/components/homepagecomp/eventshero/Eventshero";
 import Webinarmain from "@/components/homepagecomp/webinarmain/Webinarmain";
 import Partners from "@/components/homepagecomp/partners/Partners";
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [executed, setExecuted] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setIsMobile(true);
-        setExecuted(true);
       } else {
         setIsMobile(false);
-        setExecuted(true);
       }
+      setExecuted(true);
     };
+
     handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setLoading(false);
     }, 8000);
-  });
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
       {loading ? (
-        <div className="w-full  h-[100vh] relative">
+        <div className="w-full h-[100vh] relative">
           {executed && (
             <video
               src={
                 isMobile
-                  ? "https://res.cloudinary.com/drmk3hter/video/upload/v1733467466/mobLoad_k9ibhq.mp4"
-                  : "https://res.cloudinary.com/drmk3hter/video/upload/v1733467478/deskLoad_ljizow.mp4"
+                  ? "https://iste-website-v2.s3.ap-south-1.amazonaws.com/verticalthesecond.mp4"
+                  : "https://iste-website-v2.s3.ap-south-1.amazonaws.com/ideathesecondthefourth.mp4"
               }
               autoPlay
               muted
               playsInline
+              preload="auto" // Ensures video loads instantly
               className="w-full h-full object-cover transition-all duration-500 overflow-y-hidden"
             />
           )}
-          <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
+          <div className="absolute inset-0 bg-transparent pointer-events-auto"></div>
         </div>
       ) : (
         <div>
