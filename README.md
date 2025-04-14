@@ -69,7 +69,7 @@ Administrative Dashboard
   </tr>
   <tr>
     <td width="33%"><img src="./images/image8.png" alt="Admin Interface" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/><p align="center"><i>Admin Interface</i></p></td>
-    <td width="33%"><img src="./images/image9.png" alt="Analytics Dashboard" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/><p align="center"><i>Analytics Dashboard</i></p></td>
+    <td width="33%"><img src="./images/image9.png" alt="Analytics Dashboard" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/><p align="center"><i>Admin Dashboard</i></p></td>
     <td width="33%"><img src="./images/image10.png" alt="Role Management" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/><p align="center"><i>Role Management</i></p></td>
   </tr>
 </table>
