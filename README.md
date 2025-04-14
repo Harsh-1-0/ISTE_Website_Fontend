@@ -139,4 +139,4 @@ Secure Authentication: Role-based access control
 <p align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=ISTE-VIT/Website&label=Visitors&labelColor=%23007EC6&countColor=%23F05225" alt="Visitors Badge"/>
 </p>
-<h3 align="center">Made With <img href="./images/heartiste.png"alt ="heart image"> by <a href="https://istevit.in/">ISTE-VIT</a> </h3>
+<h3 align="center">Made With <img href="./images/heartiste.png"alt ="heart image"/> by <a href="https://istevit.in/">ISTE-VIT</a> </h3>
