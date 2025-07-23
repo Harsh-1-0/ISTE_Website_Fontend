@@ -2,7 +2,6 @@ import "./globals.css";
 
 export const metadata = {
   title: "ISTE-VIT",
-  embade: "ISTE VIT",
   description:
     "ISTE-VIT is a reputed visionary non-profit organisation determined to impart technical knowledge to inspire solutions with innovation",
 };
@@ -25,6 +24,24 @@ export default function RootLayout({ children }) {
         <meta
           property="og:image"
           content="https://i.ibb.co/SQW9cnV/metaiste.png"
+        />
+          <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "ISTE-VIT",
+              "url": "https://istevit.in",
+              "logo": "https://i.ibb.co/SQW9cnV/metaiste.png",
+              "description":
+                "ISTE-VIT is a reputed visionary non-profit organisation determined to impart technical knowledge to inspire solutions with innovation",
+              "sameAs": [
+                "https://www.instagram.com/istevit/",
+                "https://www.linkedin.com/company/istevit/"
+              ]
+            }),
+          }}
         />
       </head>
       <body className="font-anton min-h-screen flex flex-col justify-between">
