@@ -37,8 +37,8 @@ export default function RootLayout({ children }) {
               "description":
                 "ISTE-VIT is a reputed visionary non-profit organisation determined to impart technical knowledge to inspire solutions with innovation",
               "sameAs": [
-                "https://www.instagram.com/istevit/",
-                "https://www.linkedin.com/company/istevit/"
+               "https://www.instagram.com/iste_vit_vellore/?hl=en",
+               "https://www.linkedin.com/company/indian-society-for-technical-education/posts/?feedView=all"
               ]
             }),
           }}
