@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "ISTE",
+  title: "ISTE-VIT",
   embade: "ISTE VIT",
   description:
     "ISTE-VIT is a reputed visionary non-profit organisation determined to impart technical knowledge to inspire solutions with innovation",
@@ -11,6 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
