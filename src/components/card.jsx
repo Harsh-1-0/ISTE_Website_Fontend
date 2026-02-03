@@ -48,6 +48,12 @@ function Card(props) {
           >
             {props.domain}
           </p>
+          <p>
+             className="text-[0.93rem] mt-2 font-hamlin font-light text-gray-600 transform transition-all duration-500 delay-100
+            translate-x-0 group-hover:translate-x-2 opacity-90 group-hover:opacity-100"
+          >
+            {props.companyplaced}
+          </p>
         </div>
 
         {/* Social Links */}
