@@ -27,7 +27,7 @@ function Card(props) {
       {/* Content Container */}
       <div className="flex flex-col  w-full md:w-3/5 lg:w-1/2 transform transition-all duration-500">
         {/* Text Content */}
-        <div className="flex flex-col items-start py-2 px-5 mb-4">
+        <div className="flex flex-col items-start py-2 px-5 flex-grow">
           <h2
             className="text-[1.75rem]   leading-tight transform transition-all duration-500 
             translate-x-0 group-hover:translate-x-2"
