@@ -176,6 +176,7 @@ const AddCore = () => {
                 "Management",
                 "Motion Graphics",
                 "Web Development",
+              "Game Development",
               ].map((domain) => (
                 <option key={domain} value={domain}>
                   {domain}
